@@ -1,0 +1,38 @@
+FOR COMMAND OUTPUT :
+
+Example Script 
+-----------------------------------------------------------------
+Example 1
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /f %%g in ( 'cd' ) do (
+		echo %%g
+	)
+
+endlocal
+goto :eof
+------------------------------------------------------------------
+
+------------------------------------------------------------------
+Example 2
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /f %%g in ( 'dir' ) do (
+		echo %%g
+	)
+
+endlocal
+goto :eof
+-------------------------------------------------------------------

@@ -1,0 +1,42 @@
+FOR THROUGH FILES
+
+Example SCRIPT :
+---------------------------------------
+Example 1 (Show File)
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /f %%g in ( * ) do (
+		echo %%g
+	)	
+
+endlocal
+goto :eof
+----------------------------------------
+
+----------------------------------------
+Example 2 (Show File)
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for %%g in ( .* ) do (
+		echo %%g
+	)	
+
+endlocal
+goto :eof
+-----------------------------------------
+
+NOTED :
+/f ==> Directory
+/r ==> recurse

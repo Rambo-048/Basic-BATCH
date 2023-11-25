@@ -1,0 +1,22 @@
+FOR THROUGH FILE CONTENT :
+
+Example Script
+Example 1
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /f %%g in ( data.txt ) do (
+		echo %%g
+	)
+
+endlocal
+goto :eof
+
+
+NOTED :
+/f ==> Show Files

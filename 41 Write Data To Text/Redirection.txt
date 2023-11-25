@@ -1,0 +1,44 @@
+REDIRECTION (WRITE DATA TO TEXT)
+
+Example Script
+--------------------------------------------------------------
+Example 1
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	::stdout 1
+	::stderr 2
+
+	echo Write file into a file text 1 > file.txt
+
+endlocal
+goto :eof
+---------------------------------------------------------------
+
+---------------------------------------------------------------
+Example 2
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	::stdout 1
+	::stderr 2
+
+	echo Write file into a file text 2 >> file.txt
+
+endlocal
+goto :eof
+-------------------------------------------------------------
+
+NOTED :
+>  == Overwrite file in text
+>> == Append teks into a file

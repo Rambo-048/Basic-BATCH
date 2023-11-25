@@ -1,0 +1,88 @@
+NESTING :
+
+EXAMPLE SCRIPT
+
+ratio = Comparison
+-----------------------------------------------
+Example 1 :
+@echo off
+goto :main
+
+:main
+	set /a value_A=50
+	set /a limit=50
+
+	if %value_A%==%limit% (
+		echo Condition TRUE
+	)else (
+		echo Condition FALSE
+	)
+	
+goto :eof
+------------------------------------------------
+
+--------------------------------------------------------
+Example 2 :
+@echo off
+goto :main
+
+:main
+	set /a value_A=50
+	set /a value_B=50
+
+	set /a a=10
+	set /a b=5
+	set /a total=%a%*%b%
+
+	if %value_A% geq %value_B% (
+		echo Value A == B
+		
+		if %value_A% leq %total%(
+			echo Condition TRUE	
+		)else (
+			echo Condition FALSE
+		)
+
+		
+	) else (
+		echo Value A != B
+	)
+	
+goto :eof
+----------------------------------------------------------
+
+---------------------------------------------------------------------------
+Example 3 :
+@echo off
+goto :main
+
+:main
+	set /a value_A=50
+	set /a value_B=50
+	
+	set /a a=10
+	set /a b=5
+	set /a value_total=%a%*%b%
+
+	if %value_A% geq %value_B% (
+		echo Condition TRUE
+		
+		if %value_total% leq %b%(
+			echo Condition TRUE, value_total < b
+		)else (
+			echo Condition FALSE, value_total > b
+		)
+
+		
+	) else (
+		echo Condition ERROR
+	)
+---------------------------------------------------------------------------
+
+NOTED :
+EQU = equal
+NEQ = not Equal
+LSS = less than
+LEQ = less than or equal
+GTR = greater than
+GEQ = greater than or equal

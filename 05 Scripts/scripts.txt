@@ -1,0 +1,23 @@
+SCRIPTS:
+
+CONTOH SCRIPTS : (.bat)
+
+>> Example 1 
+   dir
+   pause
+   ver
+   cls
+
+>> Example 2
+   ver
+   pause
+
+=> Run file
+   C:\Users\test>fileName
+   atau
+   C:\Users\test>fileName.bat
+
+NOTED :
+- Use pause
+  If we cant use pause, 
+  we cannot see the command.

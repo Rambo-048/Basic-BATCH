@@ -1,0 +1,95 @@
+GO TO :
+
+EXAMPLE SCRIPT :
+--------------------------------------------------------------------------
+Example 1 
+@echo off
+
+echo This is a first line on a program!
+
+goto :end (not executed label :start and :middle. and go to :end)
+
+:start
+echo START LINE a program!
+
+:middle
+echo MIDDLE LINE a program!
+
+:end
+echo END LINE a program!
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+Example 2 
+@echo off
+
+echo This is a first line on a program!
+
+goto :start (program will jump to Start)
+
+:start
+echo START LINE from a program!
+goto :end (this script do not executed :Middle and go to :end)
+
+
+:middle
+echo MIDDLE LINE a program!
+
+:end
+echo END LINE a program!
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+Example 3 
+@echo off
+
+echo This is a first line on a program!
+
+goto :middle (program will executed script on the middle)
+
+:start
+echo START LINE from a program!
+
+:middle
+echo MIDDLE LINE a program!
+goto :start (go to start)
+
+:end
+echo END LINE a program!
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+Example 4 
+@echo off
+
+echo This is a first line on a program!
+
+:start
+echo START LINE from a program!
+
+:middle
+echo MIDDLE LINE a program!
+goto :start (go to start)
+
+:end
+echo END LINE a program!
+------------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Example 5 
+@echo off
+
+echo This is a first line on a program!
+goto :middle
+
+:start
+echo START LINE from a program!
+goto :end (do not executed this program, program will go to :end)
+
+:middle
+echo MIDDLE LINE a program!
+
+:end
+echo END LINE a program!
+-----------------------------------------------------------------------
+

@@ -1,0 +1,51 @@
+FUNCTION LOCAL SCOPE :
+
+Example Script :
+----------------------------------------------------
+Example 1
+@echo off
+goto :main
+
+:function
+	echo Function P is %p%
+	set x=30
+	echo Function X is %x%
+goto :eof
+
+:main
+	echo This is a Main Function!
+	set p=4
+	echo value p is %p%	
+
+	call :function
+
+	echo value x is %x%
+
+goto :eof
+-----------------------------------------------------
+
+-----------------------------------------------------
+Example 2
+@echo off
+goto :main
+
+:function
+setlocal
+	echo Function P is %p%
+	set x=30
+	echo Function X is %x%
+endlocal
+goto :eof
+
+:main
+setlocal
+	echo This is main function!
+	set p=4
+	echo value P is %p%	
+
+	call :function
+
+	echo value X is %x%
+endlocal
+goto :eof
+--------------------------------------------------------

@@ -1,0 +1,156 @@
+DELAYED VARIABLES EXPANSION :
+
+Example Script :
+---------------------------------------------------------
+Example 1
+@echo off
+goto :main
+
+:main
+setlocal
+	
+	echo Hello World.!
+	echo.
+
+	set /a A=80
+	set /a limit=80
+
+	set /a value_a=10
+	set /a value_b=5
+	set /a total=%value_a%*%value_b%
+
+	if %A% geq %limit% (
+		echo Check Condition
+		
+		if %total% leq %A% (
+			echo Condition TRUE		
+		)else (
+			echo Condition FALSE
+		)
+	)else (
+		echo Condition ERROR.!
+	)	
+	
+endlocal
+goto :eof
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+Example 2
+@echo off
+goto :main
+
+:main
+setlocal
+	
+	echo Hello World.!
+	echo.
+
+	set /a A=80
+	set /a limit=80
+
+	set /a value_a=10
+	set /a value_b=5
+	
+	if %A% geq %limit% (
+		echo Check Condition...
+		set /a total=%value_a%*%value_b%
+
+		
+		if %total% leq %A% (
+			echo Condition TRUE		
+		)else (
+			echo Condition FALSE
+		)
+	)else (
+		echo Condition ERROR
+	)	
+	
+endlocal
+goto :eof
+---------------------------------------------------------------
+
+---------------------------------------------------------------
+Contoh 3
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+	
+	echo Hello World.!
+	echo.
+
+	set /a A=80
+	set /a limit=80
+
+	set /a value_a=10
+	set /a value_b=5
+	
+	if %nilai_A% geq %standar% (
+		echo Check Condition...
+
+		set /a total=%value_a%*%value_b%
+		echo %total%
+		
+		if %total% leq %A% (
+			echo Condition TRUE		
+		)else (
+			echo Condition FALSE  
+		)
+	)else (
+		echo Condition ERROR
+	)	
+	
+endlocal
+goto :eof
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+Contoh 4
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+	
+	echo Hello World!
+	
+	echo Hello World^^!
+	echo "Hello World^!"
+	echo.
+
+	set /a A=80
+	set /a limit=80
+
+	set /a value_a=10
+	set /a value_b=5
+	
+	if !A! geq !limit! (
+		echo Check Condition...
+
+		set /a total=!value_a!*!value_b!
+		echo !total! 
+		
+		if !total! leq !A! (
+			echo Condition TRUE		
+		)else (
+			echo Condition FALSE
+		)
+	)else (
+		echo Condition ERROR
+	)	
+	
+endlocal
+goto :eof
+-----------------------------------------------------------------
+
+NOTED :
+EQU = equal
+NEQ = not Equal
+LSS = less than
+LEQ = less than or equal
+GTR = greater than
+GEQ = greater than or equal

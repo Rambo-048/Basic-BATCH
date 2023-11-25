@@ -1,0 +1,27 @@
+SCRIPT LOCAL SCOPE :
+
+Example Script :
+--------------------------------------------
+Example 1
+@echo off
+goto :main
+
+:main (This is a global variable)
+	echo Create a Variable
+	set global_variabel=existing
+
+goto :eof
+---------------------------------------------
+
+----------------------------------------------------------
+Example 2
+@echo off
+goto :main
+
+:main
+setlocal (Create a Local Variable)
+	echo Create a Variable
+	set local_variabel=doNotExist
+endlocal
+goto :eof
+----------------------------------------------------------

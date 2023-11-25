@@ -1,0 +1,4 @@
+Environment Variabels :
+
+
+C:\Users\Test>set (Untuk Melihat variabel yang ada di windows)

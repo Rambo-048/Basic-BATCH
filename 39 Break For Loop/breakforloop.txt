@@ -1,0 +1,26 @@
+BREAK THE FOR LOOP :
+
+Example Script
+
+Example 1
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /l %%g in (1,1,10) do (
+		if %%g equ 5 (
+			goto :loop_end	
+		)
+		echo %%g
+
+	:loop_end
+	echo.
+	echo End of Loop! (This is value-5)
+	)	
+
+endlocal
+goto :eof

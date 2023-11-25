@@ -1,0 +1,12 @@
+LABELS :
+
+EXAMPLE SCRIPT :
+
+@echo off
+
+:other (this is a label)
+cls
+ver
+
+:volume (this is a label)
+vol

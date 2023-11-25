@@ -1,0 +1,19 @@
+STRING - CONCATENATION
+
+=> cannot combine string
+   set string=hello
+   set string+=world
+
+=> combine string (concatenate) 
+   set string=hello
+   set string=%string% world
+             |
+             V
+         Concatenate
+
+=> write and show
+   set name=Hello
+   set name (show variable and insert variabel)
+   set %name% (show variable insert)
+
+

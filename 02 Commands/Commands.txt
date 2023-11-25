@@ -1,0 +1,24 @@
+Windows Commands Cheat Sheet :
+
+- dir      - see directory
+- echo     - show output
+- @echo.   - show New Line
+- echo off - nonaktif echo
+- echo on  - aktif echo
+- ver      - see Version
+- cls      - clear screen
+- pause    - pause running data
+- set      - function see variable on windows
+- rem      - this is a comment
+  ::       - this is comment 
+- cd
+  Example :
+    - cd folder 
+    - cd "My Folder"
+- vol      - show drive vol / Harddisk
+- help     - show menu help
+  example :
+  - help dir 
+  - help set
+  - ... dll
+- 

@@ -1,0 +1,118 @@
+FOR OPTIONS :
+
+Example Script :
+------------------------------------------------
+Example 1
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	echo /f %%g in ( data.txt ) do (
+		echo %%g 
+	)
+
+endlocal
+goto :eof
+-------------------------------------------------
+
+---------------------------------------------------------------
+Example 2
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	echo /f "delimeter=/" %%g in ( data.csv ) do (
+		echo %%g 
+	)
+
+endlocal
+goto :eof
+----------------------------------------------------------------
+
+-------------------------------------------------------------------
+Example 3
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	echo /f "delimeter=/ skip=3" %%g in ( file.txt ) do (
+		echo %%g 
+	)
+
+endlocal
+goto :eof
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+Example 4
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	echo /f "Value=*" %%g in ( file.csv ) do (
+		echo %%g 
+	)
+
+endlocal
+goto :eof
+--------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Example 5
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	echo /f "Value=2,3,4 delimeter=," %%g in ( file.csv ) do (
+		echo %%g 
+	)
+
+endlocal
+goto :eof
+------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------
+Example 6
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	echo /f "Value=1-5 delimeter=," %%g in ( file.csv ) do (
+		echo %%g, name %%i and value '%%j' 
+	)
+
+endlocal
+goto :eof
+
+
+
+
+CATATAN :
+/f               ==> Read File
+
+/f "delimeter=/" ==> Read Value File
+
+/ ==> Explode String Text

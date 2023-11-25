@@ -1,0 +1,37 @@
+INTRO REDIRECTION :
+
+Example Script
+-------------------------------------------------------
+Example 1 :
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	::stdout
+	dir /b > newfile.txt	
+
+endlocal
+goto :eof
+------------------------------------------------------
+
+-----------------------------------------------------
+Example 2 :
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	::stdout 1
+	::stderr 2
+	dir /b > newfile.txt
+	dir /b 2> newfile.txt
+	dir /b > newfile.txt 2>&1	
+
+endlocal
+goto :eof
+-----------------------------------------------------

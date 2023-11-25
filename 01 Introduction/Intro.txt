@@ -1,0 +1,26 @@
+BATCH ==> SYSYTEM SHELL
+
+Batch is scripting language.
+
+BATCH ==> MS-DOS
+
+SCRIPTING LANGUAGE
+- BATCH (.COM, .EXE, .BAT, .VBS, .JS, .JSE, .WSF, .WSH, .MSC)
+
+PROGRAMING LANGUAGE
+1. Interpreted Language
+   - Python
+   - Java
+
+2. Compiler Language
+   - C
+   - C++
+   - C#
+
+"Batch Script is only a Script"
+
+.COM ==> 16bit
+.EXE ==> 32bit dan 64bit
+
+System32 ==> WINDOWS/System32 ==> disebut System Path
+- In System32 too much file (.dll, Program Library)

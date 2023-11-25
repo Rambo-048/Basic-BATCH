@@ -1,0 +1,23 @@
+INPUT
+
+Example SCRIPT :
+--------------------------------------
+Example 1 :
+@echo off
+
+set /p name=insert name here!
+
+echo.
+echo My name is %name%!
+---------------------------------------
+
+---------------------------------------
+Example 2 : 
+@echo off
+
+echo Please Enter a Name!
+set /p name=insert name here!
+
+echo.
+echo My name is %name%!
+----------------------------------------

@@ -1,0 +1,67 @@
+FOR THROUGH STRING
+
+Example Script 
+---------------------------------------------------------------------
+Example 1
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+	
+	;; G H I J K L M N O P	
+
+	for /f %%g in ( "This is a string" ) do (
+		echo %%g %%h %%i %%j		
+	)
+	
+
+endlocal
+goto :eof
+----------------------------------------------------------------------
+
+---------------------------------------------------------------------
+Example 2
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+	
+	:: G H I J K L M N O P	
+
+	for /f "token=1-9" %%g in ( "This is a string" ) do (
+		echo %%g %%h %%i %%j		
+	)
+	
+
+endlocal
+goto :eof
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+Example 3
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+	
+	:: G H I J K L M N O P	
+	
+	set string=This is a string
+	
+	for /f "token=1-9" %%g in ( "!string!" ) do (
+		echo %%g %%h %%i %%j		
+	)
+	
+
+endlocal
+goto :eof
+-----------------------------------------------------------------------

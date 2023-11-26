@@ -1,0 +1,11 @@
+DELETE FILES :
+
+- delete
+
+C:/Users/Test>del /?
+
+C:/Users/Test/folder>echo folder>data.txt
+
+C:/Users/Test>del data.txt
+
+C:/Users/Test>del /P data.txt

@@ -1,0 +1,47 @@
+CHANGING THE PROMPT 
+
+C:\Users\Test>prompt
+
+Example Script :
+-------------------------------------------------------------------
+Example 1:
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	prompt $C$S%USERNAME%@%COMPUTERNAME%$S$F$_$P$S$G$S	
+
+endlocal
+goto :eof
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+Example 2 : ()
+
+@echo off
+	
+prompt $C$S%USERNAME%@%COMPUTERNAME%$S$F$_$P$S$G$S
+--------------------------------------------------------------------
+
+
+
+NOTED :
+
+ $A   & (Ampersand)
+ $B   | (pipe)
+ $C   ( (Left parenthesis)
+ $D   Current date
+ $E   Escape code (ASCII code 27)
+ $F   ) (Right parenthesis)
+ $G   > (greater-than sign)
+ $H   Backspace (erases previous character)
+ $L   < (less-than sign)
+ $N   Current drive
+ $P   Current drive and path
+ $Q   = (equal sign)
+ $S     (space)
+ $T   Current time
+ $V   Windows version number

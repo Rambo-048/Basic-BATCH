@@ -1,0 +1,16 @@
+MOVING AND RENAMING :
+
+C:/Users/Test>move /?
+
+C:/Users/Test>move data.txt new_data.txt
+
+C:/Users/Test>move /Y new_data.txt ../folder
+
+C:/Users/Test>move /Y new_data.txt ../folder > data.txt
+
+C:/Users/Test/folder>move ..\new_data.txt .
+
+C:/Users/Test>move folder folder2
+
+CATATAN :
+move ==> Move and Rename file

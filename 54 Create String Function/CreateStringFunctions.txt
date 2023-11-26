@@ -1,0 +1,53 @@
+CREATE STRING FUNCTIONS
+
+Example SCRIPT
+-----------------------------------------------------------------------------
+Example 1 (Global Variable)
+
+@echo off
+
+set string=%2
+
+for /f "useback tokens=*" %%g in ('%string%') do set string=%%~g
+
+set %1
+
+create_string name "Create String inside the quotations marks"
+-----------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+Example 2 (Global Variable)
+
+@echo off
+
+set string=%2
+
+for /f "useback tokens=*" %%g in ('%string%') do set string=%%~g
+
+set %1=%string%
+-------------------------------------------------------------------------------
+
+Run Example 2:
+C:\Users\Test>create_string var "TEXT"
+
+C:\Users\Test>echo %var%
+"TEXT"
+------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Example 3 (Local Variable)
+
+@echo off
+setlocal EnableDelayedExpansion
+goto :main
+
+:main
+setlocal
+
+	call create_string variable "Text in a String" 
+
+	echo !variable!
+
+endlocal
+goto :eof
+----------------------------------------------------------------------------------

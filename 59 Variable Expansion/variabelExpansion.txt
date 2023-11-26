@@ -1,0 +1,47 @@
+VARIABLE EXPANSION WITHOUT SETLOCAL :
+
+EXAMPLE SCRIPT :
+-------------------------------------------------------------------
+Example 1
+
+@echo off
+
+reg query "HKLM\App\Microsoft\command" /v "VariableExpansion"
+-------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------
+Example 2
+
+@echo off
+
+for /f %%g in ('reg query "HKLM\App\Microsoft\command" /v "VariableExpansion"') do (
+	echo %%g
+)
+------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------
+Example 3
+
+@echo off
+
+for /f "tokens=*" in ('reg query "HKLM\App\Microsoft\command" /v "VariableExpansion"') do (
+	set output=%%g
+	echo %output:~2,1%
+)
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+Example 4
+
+@echo off
+
+for /f "tokens=*" in ('reg query "HKLM\App\Microsoft\command" /v "VariableExpansion"') do (
+	set output=%%g
+	echo %output:~-1%
+)
+--------------------------------------------------------------------------------------------------
+
+Run Script :
+- C:\Users\Test>nama_file.bat
+- C:\Users\Test>e  <== enable
+- C:\Users\Test>d  <== disable

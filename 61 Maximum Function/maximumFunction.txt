@@ -1,0 +1,23 @@
+MAXIMUM FUNCTION (Function Show Maximum Value)
+
+Example Script
+
+Example 1 :
+
+@echo off
+
+set /a data=%1_length - 1
+
+for /l %%g in ( 0, 1, %data% ) do (
+	if %%g equ 0 (
+		set max=!%[%%g]!
+	)else (
+		if !%1[%%g]! gtr !max! (
+			set max=!%1[%%g]!
+		)
+	)
+)  
+
+set %2=!max!
+
+

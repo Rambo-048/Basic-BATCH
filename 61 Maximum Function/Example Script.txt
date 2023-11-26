@@ -1,0 +1,17 @@
+CONTOH SCRIPT
+
+@echo off
+setlocal enableDelayedExpansion
+goto :main
+
+:main
+setlocal
+
+	call create_array list_of_numbers "," "1,2,3,4,5,6,7,8,9"
+
+	call get_max list_of_numbers max
+	
+	echo !max!
+
+endlocal
+goto :eof

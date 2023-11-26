@@ -1,0 +1,8 @@
+WORK WITH FOLDERS :
+
+C:\Users\test>echo folder>data.txt
+
+CATATAN :
+del   ==> delete file in directory
+
+rmdir ==> delete directory

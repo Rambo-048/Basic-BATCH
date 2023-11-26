@@ -1,0 +1,26 @@
+MINIMUM FUNCTION : (Function Show Minimum Value)
+
+Example Script 
+
+Example 1
+@echo off
+
+:: call get_min array_name return_name
+
+set /a data=%1_length - 1
+
+for /l %%g in ( 0, 1, %data% ) do (
+	if %%g equ 0 (
+		set min=!%1[%%g]!
+	)else (
+		if !%1[%%g]! lss !min! (
+			set min=!%1[%%g]!
+		) 
+	)
+)
+
+set %2=!min!
+
+
+NOTED :
+- min ==> Minimum

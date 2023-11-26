@@ -1,0 +1,26 @@
+CREATE VARIABLE EXPANSION WITHOUT SETLOCAL :
+
+- run => regedit
+- reg add /?
+
+EXAMPLE SCRIPT :
+--------------------------------------------------------------------------------------------
+Example 1
+
+@echo off
+
+reg add "HKLM\App\Microsoft\command" /v "VariableExpansion" /t REG_DWORD /d 0 /f (false)
+reg add "HKLM\App\Microsoft\command" /v "VariableExpansion" /t REG_DWORD /d 1 /f (true)
+
+reg add "HKLM\App\Microsoft\command" /v "VariableExpansion" /t REG_DWORD /d 1 /f > nul
+-------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------
+Run Script :
+C:\Users\Test>nama_file.bat
+
+C:\Users\Test>echo !COMPUTERNAME!
+
+
+reg add "HKLM\App\Microsoft\command" /v "VariableExpansion" /t REG_DWORD /d bool /f
+-----------------------------------------------------------------------------------------

@@ -1,0 +1,15 @@
+COPYING FILES :
+
+C:/Users/Test>copy /?
+
+C:/Users/Test>copy data.txt /Users/Test/Folder
+
+C:/Users/Test>echo data1.txt data2.txt
+
+C:/Users/Test>copy *.txt folder
+
+C:/Users/Test>copy data.txt+new_data.txt folder (Combine 2 file become 1)
+
+C:/Users/Test>copy data.txt+script.bat folder
+
+C:/Users/Test>for %i in (other_data.txt data.txt) do copy %i Folder

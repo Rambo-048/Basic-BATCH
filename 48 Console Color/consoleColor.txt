@@ -1,0 +1,24 @@
+CONSOLE COLOR :
+
+Change Background and Font in terminal
+
+C:\Users\Test>help color 
+
+C:\Users\Test>color a0
+
+C:\Users\Test>color (default)
+
+Setting not permanen, restart terminal background and font back to default setting
+
+
+
+
+Change permanen Background and Font in terminal :
+1. Right click on the bar --> choose properties
+2. Choose Colors
+3. Change color 
+4. Click OK
+
+
+
+

@@ -1,0 +1,7 @@
+COLOR MESSAGE SCRIPT
+
+C:\Users\Test>color /?
+
+C:\Users\Test>color b
+
+C:\Users\Test>color 07

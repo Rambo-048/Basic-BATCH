@@ -1,0 +1,71 @@
+STRING SUBSTITUTION :
+
+EXAMPLE SCRIPT :
+---------------------------------------
+Example 1
+
+@echo off
+setlocal EnableDelayedExpansion
+goto :main
+
+:main
+setlocal
+	set var=Good Afternoon
+
+	echo !var:Afternoon=Good!
+
+endlocal
+goto :eof
+---------------------------------------
+
+---------------------------------------------------
+Example 2
+
+@echo off
+setlocal EnableDelayedExpansion
+goto :main
+
+:main
+setlocal
+	set var=Good Afternoon This is a String
+
+	set var=!var:Afternoon=Good!
+
+	echo !var:Afternoon=Morning!
+
+	echo !var:This=That!	
+
+endlocal
+goto :eof
+---------------------------------------------------
+
+------------------------------------------------------------------------
+Example 3
+
+@echo off
+setlocal EnableDelayedExpansion
+goto :main
+
+:main
+setlocal
+	set var=Good Afternoon This is a String String String String
+
+	set var=!var:Afternoon =!
+
+	set var=!var:String =! (last string can't delete)
+
+	echo !var:Morning =!
+
+	echo !var:This =!	
+
+endlocal
+goto :eof
+--------------------------------------------------------------------------
+
+
+NOTED :
+Use Terminal (Command Line) :
+
+C:\Users\Test>set var=String
+C:\Users\Test>echo %var:i=o%
+Strong

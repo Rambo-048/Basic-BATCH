@@ -1,0 +1,40 @@
+STRING QUOTATIONS :
+
+EXAMPLE SCRIPT
+--------------------------------------
+Example 1 (With Quotations Mark)
+
+@echo off
+setlocal EnableDelayedExpansion
+goto :main
+
+:main
+setlocal
+
+	set string="TEXT"
+
+	echo !string!
+
+endlocal
+goto :eof
+--------------------------------------
+
+---------------------------------------------------------------------------------
+Example 2 (No Quotations Mark --> Use for)
+
+@echo off
+setlocal EnableDelayedExpansion
+goto :main
+
+:main
+setlocal
+
+	set string="TEXT"
+	for /f "useback tokens=*" %%g in ('!string!') do set string=%%~g
+
+	echo !string!
+
+endlocal
+goto :eof
+---------------------------------------------------------------------------------
+

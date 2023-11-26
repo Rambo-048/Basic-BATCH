@@ -1,0 +1,65 @@
+SUBSTRING
+
+Example Script
+---------------------------------------------
+Example 1
+
+@echo off
+setlocal EnableDelayedExpansion
+goto :main
+
+:main
+setlocal
+
+	set var=This is a String
+	echo !var!	
+
+endlocal
+goto :eof
+---------------------------------------------
+
+---------------------------------------------
+Example 2
+
+@echo off
+setlocal EnableDelayedExpansion
+goto :main
+
+:main
+setlocal
+
+	set var=This is a String
+	echo !var:~10!	
+
+endlocal
+goto :eof
+----------------------------------------------
+
+--------------------------------------------------------
+Example 3
+
+@echo off
+setlocal EnableDelayedExpansion
+goto :main
+
+:main
+setlocal
+
+	set var=This is a String Example (length 24)
+	echo !var:~index,length!
+	echo !var:~2,8!	
+	
+	echo !var:~10,6!  (print out String)
+	echo !var:~0,-7!  (print out This is a String)
+	echo !var:~-7,17! (print out Example)
+	
+	echo !var:~-7,7!
+
+endlocal
+goto :eof
+----------------------------------------------------------
+
+NOTED :
+
+ 0  1  2  3  4  5  6  7  8  9
+-9 -8 -7 -6 -5 -4 -3 -2 -1  0

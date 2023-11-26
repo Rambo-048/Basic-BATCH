@@ -1,0 +1,78 @@
+CREATE ARRAY :
+===========================================
+CONCEPT ARRAY :
+
+:: Array
+
+   create_array grocery_list " " "A B C"
+
+   grocery_list
+   0  A
+   1  B
+   2  C
+
+   grocery_list_length -> 3
+============================================
+
+---------------------------------------------------------------------------------
+EXAMPLE SCRIPT
+Example 1
+
+@echo off
+setlocal EnableDelayedExpansion
+goto :main
+
+
+:: create_string name "delimiter" "content"
+:: create_string list_font " " "A B C D E"
+
+
+:set_index
+
+	call create_string %~1[%~2] "!%~3!"
+
+goto :eof
+
+
+:main
+	
+	call create_string delimiter %2	
+	call create_string content %3
+
+	set /a offset=0
+	set /a index=0
+
+	for /l %%g in ( 0, 1, %content_length% ) do (
+		set=!content:~%%g,1!
+
+		if "!list_font!" equ "!delimiter!" (
+			set /a length=%%g-!offset!
+			call :set_index %1 !index! "content:~!offset!,!length!"
+
+			set /a offset=%%g + 1
+			set /a index=!index! + 1
+		)
+	)
+	
+	call :set_index %1 !index! content:~%offset%,%content_length%
+	set /a %1_length=%index% + 1
+	set %1=%content%
+
+	set content=
+	set length=
+	set offset=
+	set list_font=
+	set delimiter=
+	set index=
+
+goto :eof
+---------------------------------------------------------------------------------------
+
+
+NOTED :
+
+- delimiter ==> limit data
+- Content   ==> data/value
+
+- ( index, delimiter, %content_length% )
+- ( 0, 1, %content_length% )

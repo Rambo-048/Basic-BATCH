@@ -1,0 +1,16 @@
+Example SCRIPT 
+
+@echo off
+setlocal enableExpanseDelayed
+goto :main
+
+
+:main
+setlocal
+
+	call function_value -6 variable
+
+	echo %variable%
+
+endlocal
+goto :eof

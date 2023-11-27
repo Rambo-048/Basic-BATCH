@@ -1,0 +1,31 @@
+VALUE FUNCTION :
+
+Example script
+
+Example 1
+
+@echo off
+
+:: call function_value value return_name
+
+if %1 lss 0 (
+	set /a %2=%1*-1
+) else (
+	set /a %2=%1
+)
+
+
+NOTED :
+	    %1           %2       %3
+:: call function_value value return_name
+
+
+NOTED :
+---------------------------------
+EQU = equal
+NEQ = not Equal
+LSS = less than
+LEQ = less than or equal
+GTR = greater than
+GEQ = greater than or equal
+---------------------------------

@@ -1,0 +1,48 @@
+SORT FUNCTION 
+
+EXAMPLE SCRIPT
+
+Example 1
+
+@echo off
+
+:: call sort array_number delimiter
+
+set array_number=%1 
+call create_string delimiter %2
+
+set /a limit=!%1_length!-1
+
+for /l %%g in ( 0, 1, %limit% ) do (
+	
+	for /l %%h in ( %%g, 1, %limit% ) do (
+		if !%1[%%g]! gtr !%1[%%h]! (
+			set /a temporary=!%1[%%g]!
+			call create_string %array_number%[%%g] "!%array_number%[%%h]!"
+			call create_string %array_number%[%%h] "!temporary!"
+		)	
+	)
+)
+
+
+for /l %%g in ( 0, 1, %limit% ) do (
+	set data=!data!!%array_number%[%%g]!
+
+	if %%g neq %limit% (
+		set data=!data!%delimiter%
+	)
+) 
+
+
+call create_array %array_name% "%delimiter%" "%data%"
+
+
+NOTED :
+---------------------------------
+EQU = equal
+NEQ = not Equal
+LSS = less than
+LEQ = less than or equal
+GTR = greater than
+GEQ = greater than or equal
+---------------------------------

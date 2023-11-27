@@ -1,0 +1,18 @@
+EXAMPLE SCRIPT :
+
+@echo off
+setlocal enableDelayedExpansion
+goto :main
+
+:main
+setlocal
+
+	call create_array numbers " " "56 80 90 724 482 579"
+	echo !numbers!
+	echo.
+
+	call sort numbers " "   
+	echo !numbers!   
+
+endlocal
+goto :eof

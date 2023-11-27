@@ -1,0 +1,21 @@
+CONTOH SCRIPT
+
+@echo off
+setlocal enableDelayedExpansion
+
+:main
+setlocal
+
+	call create_string sentence "Good Morning"
+	echo %sentence_length%
+	echo.
+	
+	call colormsg !fill!
+	
+	call colormsg 1F "!fill!"
+
+	call string sentence 90 row
+	echo !row!
+
+endlocal
+goto :eof

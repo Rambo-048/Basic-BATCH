@@ -1,0 +1,37 @@
+RANGE FUNCTION
+
+EXAMPLE SCRIPT
+
+Example 1
+
+@echo off
+
+:: call range array_name delimiter start step stop
+
+:: set array_name %1 
+call create_string delimiter %2
+set start=%3
+set step=%4
+set stop=%5
+
+if "%stop%" equ "" (
+	set /a stop=%start%
+	set /a start=0
+)
+
+
+if "%step%" equ "" (
+	set /a step=1
+)
+
+set data=
+for /l %%g in ( %start%, %step%, %stop% ) do (
+	set data=!data!%%g
+
+	if not %%g equ %stop% (
+		set data=!data!%delimiter%
+	)
+)
+
+
+call create_array %1 "%delimiter%" "!data!"

@@ -1,0 +1,21 @@
+EXAMPLE SCRIPT
+
+@echo off
+setlocal enableDelayedExpansion
+goto :main
+
+:main
+setlocal
+
+	call range numbers "," 10
+	                   
+	echo !numbers!   
+
+	echo !numbers[0]!
+                         
+	echo !numbers[0]_length!
+
+	echo !numbers_length!
+
+endlocal
+goto :eof

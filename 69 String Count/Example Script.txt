@@ -1,0 +1,14 @@
+EXAMPLE SCRIPT
+
+@echo off
+setlocal enableDelayedExpansion
+goto :main
+
+:main
+setlocal
+
+	call create_string variable "This is a String!"
+	call string_count "!variable!" "a" total
+
+endlocal
+goto :eof

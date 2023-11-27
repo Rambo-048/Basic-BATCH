@@ -1,0 +1,46 @@
+STRING COUNT
+
+Example Script
+
+Example 1
+
+@echo off
+goto :main
+
+:: call string_count "!char!" "!string!" return
+
+:check_text
+	if "!char:~%~1!" equ "!string:~%%h,1!" (
+		if %~2 equ !string_limit! (
+			set /a %~3=!%~3! + 1
+		)
+	)
+goto :eof
+
+
+:main
+
+call create_string string %1
+call create_string char %2
+
+set /a char_limit=%char_length% - 1
+set /a string_limit=%string_length% - 1
+
+for /l %%g in ( 0, 1, %char_string% ) do (
+	set text=!char:~%%g,1!
+
+	if "!text!" equ "!string:~0,1!" (
+		for /l %%h in ( 0, 1, !string_limit! ) do (
+			set /a offset=%%g + %%h
+				
+			call :check_text !offset! %%h %3		
+		)
+	)
+)
+
+
+if "!%3!" equ ":" (
+	set /a %3=0
+)
+	
+goto :eof

@@ -1,0 +1,21 @@
+EXAMPLE SCRIPT
+
+@echo off
+
+:: call string_ends_with "!string!" "!start!" return
+
+call create_string A %1
+call create_string B %2
+
+set /a limit=%start_length% - 1
+set /a %3=1
+
+for/l %%g in ( 1, 1, %limit% ) do (
+	
+	if "!A:~-%%g,1!" neq "!B:~-%%g,1!" (
+		set %3=0
+		goto :end
+	)
+)
+
+:end

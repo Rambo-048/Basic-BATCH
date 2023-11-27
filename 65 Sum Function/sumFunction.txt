@@ -1,0 +1,21 @@
+SUM FUNCTION
+
+EXAMPLE SCRIPT
+
+Example 1
+
+@echo off
+setlocal enableDelayedExpansion
+
+:: call sum array_numbers return
+
+set /a sum=0  
+set /a data=%1_length-1
+
+
+for /l %%g in ( 0, 1, %data% ) do ( 
+	set /a sum=!sum! + !%1[%%g]!
+)
+
+set %2=!sum!
+set sum=

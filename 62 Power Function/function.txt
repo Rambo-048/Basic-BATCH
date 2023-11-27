@@ -1,0 +1,39 @@
+POWER FUNCTION :
+
+Example Script
+
+Example 1
+
+@echo off
+setlocal enableDelayedExpansion 
+
+
+:: call get_power base_power return_name
+
+if %2 equ 0 (
+	set /a %3=1
+	goto :eof
+)
+
+set /a product=%1
+set /a data=%2 - 1
+
+for /l %%g in ( 1, 1, %data% ) do (
+	set /a product=!product! * %1
+)
+
+set %3=!product!
+
+
+NOTED :
+           %1         %2          %3
+:: call get_power base_power return_name
+
+---------------------------------
+EQU = equal
+NEQ = not Equal
+LSS = less than
+LEQ = less than or equal
+GTR = greater than
+GEQ = greater than or equal
+---------------------------------

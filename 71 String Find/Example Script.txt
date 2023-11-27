@@ -1,0 +1,16 @@
+CONTOH SCRIPT
+
+@echo off
+setlocal enableDelayedExpansion
+goto :main
+
+:main
+setlocal
+
+	call create_string variable "Good Afternoon"
+	call string_find "!variable!" "A" char
+
+	echo !char!
+
+endlocal
+goto :eof

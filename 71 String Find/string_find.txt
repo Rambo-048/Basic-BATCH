@@ -1,0 +1,57 @@
+STRING FIND 
+
+Example Script
+
+Example 1
+
+@echo off
+goto :main
+
+:: call string_find "!string!" "!find!" return char
+
+
+:check_A
+	if "!data:~%~1,1!" equ "!find:~%~2,1!" (
+		if %~2 equ !find_limit! (
+			set /a char=%~1 - %~2
+			set %~3=!char!
+
+			set found=true
+		)
+	)
+goto :eof
+
+
+:main
+
+	call create_string data %1
+	call create_string find %2
+	set found=	
+
+	set /a %3=-1
+
+	set start_char=%4	
+
+	if "%start_char%" equ "" (
+		set start_pos=0
+	)
+
+	set /a data_limit=%data_length% - 1
+	set /a find_limit=%find_length% - 1
+
+	for /l %%g in ( %start_position%, 1, %data_limit% ) do (
+		set A=!data:~%%g,1!
+
+		if "!A!" equ "!find:~0,1!" (
+			for /l %%h in ( 0, 1, %find_limit% ) do (
+				set /a offset=%%g + %%h
+
+				call :check_A !offset! %%h
+				if defined found (
+					goto :eof
+				) 				
+			)
+		)
+	) 
+
+goto :eof

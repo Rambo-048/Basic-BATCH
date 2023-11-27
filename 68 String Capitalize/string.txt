@@ -1,0 +1,30 @@
+STRING CAPITAL :
+
+Example Script
+
+Example 1
+
+@echo off
+
+:: call capital "!string!" return
+
+call create_array uppers " " "ABCDE"
+call create_array lowers " " "abcde"
+
+
+call create_string string %1
+
+set data=%string:~0,1%
+
+set /a limit=%uppers_length% - 1
+
+for /l %%g in ( 0, 1, %limit% ) do (
+	if !lowers[%%g]! equ !data! (
+		set  %2=!uppers[%%g]!
+		goto :end
+	)
+)
+
+set %2=!data!
+:end
+set %2=!%2!!string:~1!

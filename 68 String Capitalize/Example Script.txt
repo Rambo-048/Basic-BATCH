@@ -1,0 +1,17 @@
+EXAMPLE SCRIPT
+
+@echo off
+setlocal enableDelayedExpansion
+goto :main
+
+:main
+setlocal
+
+	call create_string variable "Good Afternoon"
+
+	call capital "!variable!" return
+
+	echo !return!
+
+endlocal
+goto :eof

@@ -1,0 +1,26 @@
+STRING IS ALPHABET
+
+@echo off
+
+:: call string_alpha "!string!" return
+
+call create_array array "a" "!a@a#a$a%a^a&a"
+call create_string string %1
+
+set /a limit=%string_length% - 1
+set /a array_limit=%array_length% - 1
+
+set %2=1
+
+for /1 %%g in ( 0, 1, %limit% ) do (
+	set character=!string:~%%g,1!
+	
+	for /l %%g in ( 0, 1, %array_limit% ) do (
+		if "!char!" equ "!array[%%h]!" (
+			set %2=0
+			goto :end
+		)
+	)
+)
+
+:end

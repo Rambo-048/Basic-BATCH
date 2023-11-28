@@ -1,0 +1,16 @@
+@echo off
+
+:: call string_join "!string!" "!join!" return
+
+call create_string data %1
+call create_string join %2
+
+set /a limit=%data_length% - 1
+
+for /l %%g in (0, 1, %limit%) do (
+	if not %%g equ %limit% (
+		set %3=!%2!!data:~%%g,1!!join!	
+	) else (
+		set %3=!%2!!data:~%%g,1!
+	)
+)

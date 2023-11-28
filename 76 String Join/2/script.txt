@@ -1,0 +1,15 @@
+@echo off
+
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+	call create_string string "This is string"
+	call string_join "!string!" "..." return
+	
+	echo !return!
+
+endlocal
+goto :eof
+

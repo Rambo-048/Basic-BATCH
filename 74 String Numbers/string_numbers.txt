@@ -1,0 +1,24 @@
+@echo off
+
+:: call string_numbers "!string!" return
+
+call create_array numbers "0" "0&0#0!0#0%0*0"
+call create_string data %1
+
+set /a limit=%data_length% - 1
+set /a numbers_limit=%numbers_length% - 1
+
+set %2=1
+
+for /l %%g in (0, 1, %limit%) do (
+	set char=!data:~%%g,1!
+	
+	for /l %%h in (0, 1, %numbers_limit%) do (
+		if "!char!" equ "!numbers[%%h]!" (
+			set %2=0
+			goto :end
+		)
+	)
+)
+
+:end

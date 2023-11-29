@@ -1,0 +1,19 @@
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	call create_array array " " "Create Array"
+	call array_append array " " ::"Good Morning"
+	
+	echo !array!
+	echo !array[0]!
+	echo !array_length!
+
+
+endlocal
+goto :eof
+
+

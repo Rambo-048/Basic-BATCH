@@ -1,0 +1,33 @@
+@echo off
+cls
+title batch_prompt
+echo.
+echo.
+call colormsg d "    Create Prompt"
+echo.
+echo.
+echo.
+for /f "tokens=*" %%g in ( 'date /T' ) do (
+	set date=%%g
+)
+
+call colormsg F "    %date%"
+echo.
+echo.
+
+:run
+set input=
+echo.
+call colormsg a "(" & call colormsg b "%USERNAME%" & call colormsg a "@" &
+call colormsg c "%COMPUTERNAME%" & call colormsg a ")" & echo. &
+call colornsg d "%cd%" & call colormsg ab " > "
+
+set /p input=
+cmd /C %input%
+if "%input%" equ "" (
+	goto :run
+)
+
+
+%input% > nul 2>&1
+goto :run

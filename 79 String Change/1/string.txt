@@ -1,0 +1,14 @@
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	call create_string string "ABCDEfghijkl"
+	call string_change "!string!" return
+	
+	echo !return!
+
+endlocal
+goto :eof

@@ -1,0 +1,15 @@
+@echo off
+setlocal enabledelayedexpansion
+
+goto :main
+
+:main
+setlocal
+
+	call create_array array " " "Create Array"
+	call array_index array "String" return
+	
+	echo !return!
+
+endlocal
+goto :eof

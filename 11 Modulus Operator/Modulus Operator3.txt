@@ -1,0 +1,51 @@
+MODULUS OPERATOR :
+
+--------------------------------------------------------
+Write Code on Command
+C:\User\Test>set /a mod=30%10
+0
+C:\User\Test>set /a mod=30%20
+10
+
+Write code
+C:\User\Test>set /a mod=30%10
+0
+C:\User\Test>echo %mod%
+---------------------------------------------------------
+
+
+EXAMPLE :
+---------------------------------------------------------
+Example 1 :
+@echo off
+
+set /a mod=30%10 (value 300 will show on screen)
+
+echo %mod%
+
+Output ==> 300
+---------------------------------------------------------
+
+---------------------------------------------------------
+Example 2 :
+@echo off
+
+set /a mod=30 % 10 (if use space)
+
+echo %mod%
+
+Output ==> Missing Operator 
+           300
+---------------------------------------------------------
+
+---------------------------------------------------------------
+Example 3 :
+@echo off
+
+set /a mod=30 %% 10 (Manipulated echo %mod% on nextline)
+
+echo %mod%
+
+Output ==> 0
+--------------------------------------------------------------
+

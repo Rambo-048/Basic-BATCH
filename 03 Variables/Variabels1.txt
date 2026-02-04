@@ -1,0 +1,17 @@
+Variabels :
+
+=> Tidak Bisa dijalankan (Tambahkan set didepannya agar bisa dijalankan)
+C:\Users\Test>varname=test
+
+C:\Users\Test>varname="test"
+
+C:\Users\Test>%varname%
+
+
+=> See Variable on Windows
+C:\Users\Test>set 
+atau
+C:\Users\Test>set NAMAVARIABEL
+Contoh :
+C:\Users\Test>set varname=test (do not save in system)
+C:\Users\Test>set varname="test" (save in system)

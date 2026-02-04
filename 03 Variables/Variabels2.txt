@@ -1,0 +1,19 @@
+Variabels :
+
+=> Tidak Bisa dijalankan (Tambahkan set didepannya agar bisa dijalankan)
+C:\Users\Test>VARIABLE=A LITTLE BIT OF CRAZY, A LITTLE BIT OF LOUD, AND A WHOLE LOT OF LOVE 
+
+C:\Users\Test>VARIABLE="A LITTLE BIT OF CRAZY, A LITTLE BIT OF LOUD, AND A WHOLE LOT OF LOVE"
+
+C:\Users\Test>%VARIABLE%
+
+
+=> See Variable on Windows
+C:\Users\Test>set 
+atau
+C:\Users\Test>set NAMAVARIABEL
+
+
+Contoh :
+C:\Users\Test>set VARIABLE=A LITTLE BIT OF CRAZY, A LITTLE BIT OF LOUD, AND A WHOLE LOT OF LOVE (do not save in system)
+C:\Users\Test>set VARIABLE="A LITTLE BIT OF CRAZY, A LITTLE BIT OF LOUD, AND A WHOLE LOT OF LOVE" (save in system)

@@ -1,0 +1,21 @@
+SCRIPTS:
+
+Example SCRIPTS : (.bat)
+
+>> Example 1 (show hello world)
+   set string=Hello World!
+   echo %string%
+   
+>> Example 2
+   set string=Hello (Running inside variable)
+   echo %string%
+   ------------------------------
+   set string=Hello (Running inside variable)
+   echo(show ECHO is on)
+   --------------------------------
+   set string=Hello
+   echo. (show empty screen, but program executed)
+   ---------------------------------------
+   set string=Hello (Running inside variable)
+   echo hello
+   --------------------------------------

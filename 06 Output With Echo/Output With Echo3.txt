@@ -1,0 +1,22 @@
+SCRIPTS:
+
+Example SCRIPTS : (.bat)
+
+>> Example 1
+   set STRING1 = Spread Love Everywhere You Go, Let No One Come To You, Without Leaving Happier!
+   echo %STRING1%
+   
+>> Example 2
+   set STRING2 = Love Is The Beauty Of Soul (Running inside variable)
+   echo %STRING2%
+   ------------------------------
+   set STRING3 = Just Be Yourself, There Is No One Better (Running inside variable)
+   echo(show ECHO is on)
+   --------------------------------
+   set STRING4 = You Can't Hurt Someone You Love
+   echo. (show empty screen, but program executed)
+   ---------------------------------------
+   set STRING5 = And Thats How I Know You Never Truly Love Me (Running inside variable)
+   echo %STRING5%
+   echo hello
+   --------------------------------------

@@ -1,0 +1,22 @@
+INPUT
+
+Example SCRIPT :
+--------------------------------------
+Example 1 :
+@echo off
+
+set /p STRING=insert some text here!
+
+echo.
+echo String is %STRING%!
+---------------------------------------
+
+---------------------------------------
+Example 2 : 
+@echo off
+
+echo Please Insert A Text!
+set /p STRING=insert some text here!
+
+echo.
+echo String is %STRING%!

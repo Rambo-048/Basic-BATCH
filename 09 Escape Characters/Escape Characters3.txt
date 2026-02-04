@@ -1,0 +1,44 @@
+ESCAPE CHARACTERS :
+
+Example Script :
+----------------------------------------------------------------
+Example 1
+@echo off
+
+set VARIABLE1=Your Wings Already Exist You Just Have To Believe And Fly
+
+echo %VARIABLE1% (show file in VARIABLE)
+---------------------------------------------------------------
+
+---------------------------------------------------------------
+Example 2
+@echo off
+
+set VARIABLE2=Miracles Happen To Those Who Carries Hope In Their Heart
+
+echo %%VARIABLE2%% (Show %VARIABLE2%)
+---------------------------------------------------------------
+
+---------------------------------------------------------------
+Example 3
+@echo off
+
+set VARIABLE3=Have A Little Hope In Your Heart And Your Life Will Get A Lot Better
+
+echo <html> (Executed program but cannot show output)
+
+===================================
+-> Write script on Command Line use ^
+   echo ^<html^> (Output <html>)
+   echo ^^ (Menampilkan Output ^)
+==================================
+----------------------------------------------------------------
+
+
+NOTED :
+Escape Character to Manipulated String
+- %%v ==> 
+- %%p ==> 
+- > < ==> 
+- ^<html^> ==> <html>      
+

@@ -1,0 +1,18 @@
+EXAMPLE SCRIPT :
+----------------------------------------------
+Example 1 :
+@echo off
+
+set sum=15+15
+
+echo Total Value is %sum% (Show String)
+----------------------------------------------
+
+----------------------------------------------
+Example 2 :
+@echo off
+
+set /a sum=25+25
+
+echo Total Value is %sum% (Show Integer)
+----------------------------------------------

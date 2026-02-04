@@ -1,0 +1,53 @@
+ECHO OFF :
+
+echo off (Nonaktif echo but command can still run)
+echo on  (Untuk mengembalikan ke semula)
+
+
+Example SCRIPT :
+----------------------------------------------------------
+Example 1 :
+echo off (Command to nonaktif echo)
+
+vol
+version
+echo. (command to create Newline)
+echo Be Happy Not Because Everything Is Good, But Because You Can See The Good Side Of Everything
+----------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+Example 2 :
+@echo off (nonaktif echo) add symbol @ on echo off
+
+cls
+echo.
+echo.
+
+vol
+version
+echo. (Create a Newline)
+echo Do Not Anticipate Trouble Or Worry About What May Never Happen. Keep in Sunlight
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+Example 3 : 
+Insert symbol @ after command
+Example : 
+
+echo off (nonaktif echo)
+
+cls
+echo.
+echo.
+
+vol@ <--- Example
+version@ <--- Example
+echo. (this command will create newline)
+echo Love Is The Beauty Of Soul
+------------------------------------------------------------------------------------------
+
+
+OUTPUT :
+This script will running in 1 Output, 
+write script use symbol @
+

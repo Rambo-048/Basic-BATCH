@@ -1,0 +1,17 @@
+STRING - CONCATENATION
+
+=> cannot combine string
+   set string=Hard Work
+   set string+=And Be Nice To People
+
+=> combine string (concatenate) 
+   set string=Good Things
+   set string=%string% Take Time
+             |
+             V
+         Concatenate
+
+=> write and show
+   set string=See The Possibility Not The Problem
+   set string (show variable and insert variabel)
+   set %name% (show variable insert)

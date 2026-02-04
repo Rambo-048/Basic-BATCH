@@ -1,0 +1,21 @@
+The @ Symbol :
+
+@echo Spread Love Everywhere You Go, Let No One Come To You, Without Leaving Happier!
+@echo Love Is The Beauty Of Soul
+---------------------------------------------
+
+Example Script :
+
+ver
+@vol
+(two script running in 1 Output)
+---------------------------------------------
+---------------------------------------------
+Use @ file will show in 1 OUTPUT
+Example :
+@ver
+@vol
+@dir
+@echo. (Show New Line)
+@pause
+---------------------------------------------

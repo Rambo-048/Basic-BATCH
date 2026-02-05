@@ -1,0 +1,61 @@
+
+BASIC FUNCTION :
+
+Example SCRIPT :
+-----------------------------------------------------------------------------
+Example 1
+@echo off
+goto :main
+
+echo This is a first program! (this function do not executed, cause go to :main)
+
+:main
+	echo This is Main Function!
+
+goto :eof
+-----------------------------------------------------------------------------		
+
+-----------------------------------------------------------------------------
+Example 2
+@echo off
+goto :main
+
+
+:function
+	echo This is another function!
+goto :eof
+
+
+
+:main
+	echo This is Main Function!
+	call :function
+	echo This is End from Main Function!
+	echo This is End from Program! 
+goto :eof
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Contoh 3
+@echo off
+goto :main
+
+
+:function
+	echo This is another function
+goto :eof
+
+
+
+:main
+	echo This is Main Function!
+	call :function
+	echo This is End from Main Function!
+	echo This is End from Program! 
+goto :eof
+--------------------------------------------------------------------------
+
+
+NOTED :
+:eof(end of file)
+

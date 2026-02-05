@@ -1,0 +1,61 @@
+
+BASIC FUNCTION :
+
+Example SCRIPT :
+-----------------------------------------------------------------------------
+Example 1
+@echo off
+goto :main
+
+echo It's A Slow Process, Quitting Won't Speed It Up (this function do not executed, cause go to :main)
+
+:main
+	echo Slow Down And Enjoy The Simple Pleasures In Life!
+
+goto :eof
+-----------------------------------------------------------------------------		
+
+-----------------------------------------------------------------------------
+Example 2
+@echo off
+goto :main
+
+
+:function
+	echo Every Moment Is A Fresh Beginning!
+goto :eof
+
+
+
+:main
+	echo Slow Down And Enjoy The Simple Pleasures In Life!
+	call :function
+	echo Work Hard In Silence!
+	echo Calm Is Super Power, Dont Let Stress Kill Your Happiness! 
+goto :eof
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Contoh 3
+@echo off
+goto :main
+
+
+:function
+	echo Calm Is Super Power, Dont Let Stress Kill Your Happiness!
+goto :eof
+
+
+
+:main
+	echo Every Moment Is A Fresh Beginning!
+	call :function
+	echo Every Saint Has A Past And Every Sinner Has A Future!
+	echo It's Not That I Am So Smart, It's Just That I Stay With Problems Longer! 
+goto :eof
+--------------------------------------------------------------------------
+
+
+NOTED :
+:eof(end of file)
+

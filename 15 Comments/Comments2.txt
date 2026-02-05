@@ -1,0 +1,15 @@
+COMMENTS :
+
+Example write rem on command line:
+C:\User\Test>rem this is a comment!
+C:\User\Test>no output
+
+Example SCRIPT :
+
+@echo off
+
+echo Slow Down And Enjoy The Simple Pleasures In Life!
+
+rem Slow Down And Enjoy The Simple Pleasures In Life!
+
+:: Slow Down And Enjoy The Simple Pleasures In Life!

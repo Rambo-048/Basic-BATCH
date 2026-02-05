@@ -1,0 +1,94 @@
+GO TO :
+
+EXAMPLE SCRIPT :
+--------------------------------------------------------------------------
+Example 1 
+@echo off
+
+echo We Grow Through What We Go Through
+
+goto :end (not executed label :start and :middle. and go to :end)
+
+:start
+echo Calm Is Super Power, Dont Let Stress Kill Your Happiness!
+
+:middle
+echo Every Saint Has A Past And Every Sinner Has A Future!
+
+:end
+echo It's Not That I Am So Smart, It's Just That I Stay With Problems Longer!
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+Example 2 
+@echo off
+
+echo Calm Is Super Power, Dont Let Stress Kill Your Happiness!
+
+goto :start (program will jump to Start)
+
+:start
+echo The Hard Days, Make You Stronger!
+goto :end (this script do not executed :Middle and go to :end)
+
+
+:middle
+echo Every Moment Is A Fresh Beginning!
+
+:end
+echo Work Hard In Silence!
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+Example 3 
+@echo off
+
+echo The Hard Days, Make You Stronger!
+
+goto :middle (program will executed script on the middle)
+
+:start
+echo Work Hard In Silence!
+
+:middle
+echo Calm Is Super Power, Dont Let Stress Kill Your Happiness!
+goto :start (go to start)
+
+:end
+echo Every Moment Is A Fresh Beginning!
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+Example 4 
+@echo off
+
+echo Every Moment Is A Fresh Beginning!
+
+:start
+echo The Hard Days, Make You Stronger!
+
+:middle
+echo Work Hard In Silence!
+goto :start (go to start)
+
+:end
+echo Calm Is Super Power, Dont Let Stress Kill Your Happiness!
+------------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Example 5 
+@echo off
+
+echo We Grow Through What We Go Through
+goto :middle
+
+:start
+echo Every Saint Has A Past And Every Sinner Has A Future!
+goto :end (do not executed this program, program will go to :end)
+
+:middle
+echo It's Not That I Am So Smart, It's Just That I Stay With Problems Longer!
+
+:end
+echo Calm Is Super Power, Dont Let Stress Kill Your Happiness!
+-----------------------------------------------------------------------

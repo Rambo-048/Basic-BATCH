@@ -1,0 +1,96 @@
+
+FUNCTION RETURN
+
+--------------------------------------------------------------
+Example 1 :
+
+@echo off
+goto :main
+
+:new_function
+	echo Never Give Up	
+goto :eof
+
+:main
+	echo Never Stop Learning
+	echo %variable%
+
+	call :new_function
+goto :eof
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+Example 2 :
+
+@echo off
+goto :main
+
+:new_function
+	echo Because Life Never Stop Teaching
+	set variable=SLOW DOWN AND ENJOY SIMPLE PLEASURES IN LIFE
+
+
+:main
+	echo Never Stop Learning
+	echo %variable%
+
+	call :new_function
+	echo %variable%
+goto :eof
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+Contoh 3 :
+
+@echo off
+goto :main
+
+:new_function
+	echo Never Stop Teaching
+	echo %~1 %~2 %~3 (this will print variable not value) 
+	set %~1=Learning
+goto :eof
+
+:main
+	echo Never Stop Learning
+	set new_var=EnjoySimplePleasuresInLife
+
+	echo Slow Down %new_var%
+
+	call :new_function Never Stop Learning
+	echo %new_var%
+goto :eof
+------------------------------------------------------------------
+
+------------------------------------------------------------------
+Example 4 :
+
+@echo off
+goto :main
+
+:new_function
+	echo Never Stop Teaching
+	echo %~1 %~2 %~3 %~4 %~5 (Create a Variable) 
+	set %~1=Learning (Variable %~1, Value afternoon)	
+goto :eof
+
+
+:main
+	echo Never Stop Learning
+	set new_var=EnjoySimplePleasuresInLife
+
+	echo Never Stop Learning %new_var%
+
+	call :new_function Enjoy Simple Pleasures In Life
+	
+	echo Every Moment Is A Fresh Beginning, %new_var%
+goto :eof
+----------------------------------------------------------------
+
+
+NOTED :
+%%~1%
+- Create variable on a shell do not use space
+  contoh :
+  - new_var = Morning (WRONG)
+  - new_var=Morning (RIGHT)

@@ -1,0 +1,89 @@
+
+FUNCTION ARGUMENT :
+
+Example Script :
+--------------------------------------------------
+Example 1 :
+@echo off
+goto :main
+
+:string
+	echo Never Stop Learning, Because Life Never Stop Teaching!
+goto :eof
+
+
+:main
+	echo Slow Down And Enjoy Simple Pleasures In Life
+	call :string
+goto :eof
+---------------------------------------------------
+
+---------------------------------------------------
+Example 2 :
+@echo off
+goto :main
+
+:string
+	echo Be Patient, The Storm Will Pass, The Spring Will Come
+goto :eof
+
+
+:main
+	echo Let Your Heart Be The Anchor And The Beat Of Your Song
+	call :string
+	echo End
+goto :eof
+----------------------------------------------------
+
+----------------------------------------------------
+Example 3 :
+@echo off
+goto :main
+
+:string
+	echo Because Life %~1!
+goto :eof
+
+
+:main
+	echo Never Stop Learning
+	call :string NeverStopTeaching
+	echo End
+goto :eof
+-----------------------------------------------------
+
+-----------------------------------------------------
+Example 4 :
+@echo off
+goto :main
+
+:string
+	echo Because Life %1 %2 %3
+goto :eof
+
+
+:main
+	echo Never Stop Learning
+	call :string Never Stop Teaching
+goto :eof
+------------------------------------------------------
+
+-----------------------------------------------------
+Example 5 :
+@echo off
+goto :main
+
+:string
+	echo Be The Anchor %~1 %~2 %~3 %~4 %~5 %~6
+goto :eof
+
+
+:main
+	echo Let Your Heart
+	call :string And The Beat Of Your Song
+goto :eof
+------------------------------------------------------
+
+NOTED :
+%~1! ==> This call argumen -> 1 (GoodNight)
+%~2! ==> This call argumen -> 2

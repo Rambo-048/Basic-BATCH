@@ -1,0 +1,54 @@
+FUNCTION LOCAL SCOPE :
+
+Example Script :
+----------------------------------------------------
+Example 1
+@echo off
+goto :main
+
+:function
+	echo Value Data %value1%
+	set range=30
+	echo Range Data %range%
+goto :eof
+
+:main
+	echo DATA AND FILE!
+	set value1=5
+	set /a value2=5*5
+	echo Value File %value2%	
+
+	call :function
+
+	echo Range File %range%
+
+goto :eof
+-----------------------------------------------------
+
+-----------------------------------------------------
+Example 2
+@echo off
+goto :main
+
+:function
+setlocal
+	echo Value Data %value1%
+	set range=50
+	echo Range Data %range%
+endlocal
+goto :eof
+
+:main
+setlocal
+	echo DATA AND FILE!
+	set value1=15
+	set /a value2=15*5
+	echo Value File %value2%	
+
+	call :function
+
+	echo Range File %range%
+endlocal
+goto :eof
+--------------------------------------------------------
+

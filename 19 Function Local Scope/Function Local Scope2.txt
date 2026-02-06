@@ -1,0 +1,127 @@
+FUNCTION LOCAL SCOPE :
+
+Example Script :
+----------------------------------------------------
+Example 1
+@echo off
+goto :main
+
+:function
+	echo Value Data %value%
+	set range=10
+	echo Range Data %range%
+goto :eof
+
+:main
+	echo DATA AND FILE!
+	set value=5
+	echo Value File %value%	
+
+	call :function
+
+	echo Range File %range%
+
+goto :eof
+-----------------------------------------------------
+
+-----------------------------------------------------
+Example 2
+@echo off
+goto :main
+
+:function
+setlocal
+	echo Value Data %value%
+	set range=20
+	echo Range Data %range%
+endlocal
+goto :eof
+
+:main
+setlocal
+	echo DATA AND FILE!
+	set value=10
+	echo Value File %value%	
+
+	call :function
+
+	echo Range File %range%
+endlocal
+goto :eof
+--------------------------------------------------------
+
+----------------------------------------------------
+Example 3
+@echo off
+goto :main
+
+:function
+	echo Value Data %value%
+	set range=30
+	echo Range Data %range%
+goto :eof
+
+:main
+	echo DATA AND FILE!
+	set value=15
+	echo Value File %value%	
+
+	call :function
+
+	echo Range File %range%
+
+goto :eof
+-----------------------------------------------------
+
+-----------------------------------------------------
+Example 4
+@echo off
+goto :main
+
+:function
+setlocal
+	echo Value Data %value%
+	set range=40
+	echo Range Data %range%
+endlocal
+goto :eof
+
+:main
+setlocal
+	echo DATA AND FILE!
+	set value=20
+	echo Value File %value%	
+
+	call :function
+
+	echo Range File %range%
+endlocal
+goto :eof
+--------------------------------------------------------
+
+--------------------------------------------------------
+Example 5
+@echo off
+goto :main
+
+:function
+setlocal
+	echo Value Data %value%
+	set range=50
+	echo Range Data %range%
+endlocal
+goto :eof
+
+:main
+setlocal
+	echo DATA AND FILE!
+	set value=25
+	echo Value File %value%	
+
+	call :function
+
+	echo Range File %range%
+endlocal
+goto :eof
+--------------------------------------------------------
+

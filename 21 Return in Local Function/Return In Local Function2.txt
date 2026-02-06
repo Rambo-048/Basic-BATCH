@@ -1,0 +1,113 @@
+RETURN IN LOCAL FUNCTION :
+
+Example SCRIPT 
+---------------------------------------------------
+Example 1:
+
+@echo off
+goto :main
+
+
+:insert_value
+	echo INSERT VALUE
+	set /a data=%value%+10
+goto :eof
+
+:main
+	echo SET VALUE
+	set /a value=10
+	
+	call :insert_value
+	
+	echo DATA : %data%
+goto :eof
+---------------------------------------------------
+
+---------------------------------------------------
+Example 2: (Local Scope)
+
+@echo off
+goto :main
+
+:insert_value
+setlocal
+	echo INSERT VALUE	
+	set /a data=%value%+10
+	echo DATA LOCAL 2 %data%
+endlocal
+goto :eof
+
+:main
+setlocal
+	echo SET VALUE
+	set /a value=15*2
+
+	call :insert_value
+	
+	echo DATA LOCAL 1 %data% (set /a data=15*2)
+endlocal
+goto :eof
+-----------------------------------------------------
+
+-----------------------------------------------------
+Example 3: (Local Scope)
+
+@echo off
+goto :main
+
+
+:insert_value
+setlocal
+	echo INSERT VALUE	
+	set /a data=%value%+10
+	goto :eof
+	echo DATA LOCAL 2 %data%
+endlocal
+goto :eof
+
+:main
+setlocal
+	echo SET VALUE
+	set /a value=20*5
+
+	call :insert_value
+
+	echo DATA LOCAL 1 %data%
+	
+endlocal
+goto :eof
+-------------------------------------------------------
+
+-------------------------------------------------------
+Example 4: (Local Scope)
+
+@echo off
+goto :main
+
+:insert_value
+setlocal
+
+	set string1=FALL IN LOVE WITH THE PROCESS, BECOMING THE VERY BEST VERSION OF YOURSELF
+	set string2=ENJOY THE LITTLE THINGS IN LIFE
+	echo INSERT VALUE
+	
+endlocal & set /a data=%value%+10
+goto :eof
+
+:main
+setlocal
+	echo SET VALUE
+	set /a value=30*5
+
+	call :insert_value
+
+	echo DATA LOCAL : %data%
+	echo.
+	echo.	
+	echo STRING 1   : %string1%
+	echo STRING 2   : %string2%
+	
+endlocal
+goto :eof
+-------------------------------------------------------
+

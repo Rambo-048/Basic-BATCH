@@ -1,0 +1,116 @@
+RETURN IN LOCAL FUNCTION :
+
+Example SCRIPT 
+---------------------------------------------------
+Example 1:
+
+@echo off
+goto :main
+
+
+:insert_value
+	echo Performing INSERT VALUE on x
+	
+	set /a x=%x%+1
+goto :eof
+
+:main
+	echo Run a Main Function...
+	echo Setting X to 1..
+	set /a x=1
+	echo Value X is %x%
+goto :eof
+---------------------------------------------------
+
+---------------------------------------------------
+Example 2: (Local Scope)
+
+@echo off
+goto :main
+
+:insert_value
+setlocal
+	echo Performing INSERT VALUE on x
+	
+	set /a x=%x%+1
+
+	echo INSERT VALUE X is %x%
+endlocal
+goto :eof
+
+:main
+setlocal
+	echo Run a Main Function...
+	echo Setting X to 1..
+	set /a x=1
+
+	call :insert_value
+	
+	echo Value X is %x%
+endlocal
+goto :eof
+-----------------------------------------------------
+
+-----------------------------------------------------
+Example 3: (Local Scope)
+
+@echo off
+goto :main
+
+
+:insert_value
+setlocal
+	echo Performing INSERT VALUE on x
+	
+	set /a x=%x%+1
+	goto :eof
+	echo Value X is %x%
+endlocal
+goto :eof
+
+:main
+setlocal
+	echo Run a Main Function...
+	echo Setting X to 1..
+	set /a x=1
+
+	call :insert_value
+
+	echo Value X is %x%
+	
+endlocal
+goto :eof
+-------------------------------------------------------
+
+-------------------------------------------------------
+Example 4: (Local Scope)
+
+@echo off
+goto :main
+
+:insert_value
+setlocal
+
+	set String=harmony		
+	echo Performing INSERT VALUE on x
+	
+endlocal & set /a x=%x%+1
+goto :eof
+
+:main
+setlocal
+	echo Run a Main Function...
+	echo Setting X to 1..
+	set /a x=1
+
+	call :insert_value
+
+	echo Value from X is %x%
+	echo.
+	echo.	
+	echo String is %string%	
+	
+endlocal
+goto :eof
+-------------------------------------------------------
+

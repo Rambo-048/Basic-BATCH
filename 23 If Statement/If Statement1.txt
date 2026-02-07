@@ -1,0 +1,31 @@
+IF STATEMENT :
+
+Example SCRIPT :
+@echo off
+goto :main
+
+
+:main
+setlocal
+	echo Hello A
+	echo.
+
+	set /a A=10
+	set /a B=10
+
+	if %A%==%B% ( 
+		echo Condition, TRUE.!!
+	)
+	
+	echo.
+	echo Hello B
+endlocal
+goto :eof
+
+
+
+NOTED :
+=    -- ==> Assignment Operator
+
+==   -- ==> Comparison Operator
+

@@ -1,0 +1,31 @@
+IF STATEMENT :
+
+Example SCRIPT :
+@echo off
+goto :main
+
+
+:main
+setlocal
+	echo Every Great Story Happened When Someone Decided Not To Give Up
+	echo.
+
+	set /a A=10
+	set /a B=20
+
+	if %A%==%B% ( 
+		echo BE A WARRIOR, NOT A WORRIER!!
+	)
+	
+	echo.
+	echo Every Sunrise Is A Second Chance To Shine
+endlocal
+goto :eof
+
+
+
+NOTED :
+=    -- ==> Assignment Operator
+
+==   -- ==> Comparison Operator
+

@@ -1,0 +1,31 @@
+IF STATEMENT :
+
+Example SCRIPT :
+@echo off
+goto :main
+
+
+:main
+setlocal
+	echo Trust What You Feel, Not What You Hear
+	echo.
+
+	set /a A=15
+	set /a B=25
+
+	if %A%==%B% ( 
+		echo BEAUTIFUL FACES ARE EVERYWHERE, BUT BEAUTIFUL HEARTS ARE HARD TO FIND!!
+	)
+	
+	echo.
+	echo Eyes Full Of Stories, Heart Full Of Memories
+endlocal
+goto :eof
+
+
+
+NOTED :
+=    -- ==> Assignment Operator
+
+==   -- ==> Comparison Operator
+

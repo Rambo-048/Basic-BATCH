@@ -1,0 +1,187 @@
+RETURNING PASSED IN VARIABEL :
+
+Example Script :
+------------------------------------------------------------
+Example 1
+
+@echo off
+goto :main
+
+:insert_value
+setlocal
+	echo INSERT DATA VARIABLE
+endlocal & set /a data=%value1%+10	
+goto :eof
+
+:main
+setlocal
+
+	set /a value1=10
+	set /a value2=20
+	set /a value3=30
+	set /a value4=40
+	set /a value5=50
+
+	echo CREATE AND SET DATA VARIABLE %data%
+	echo.
+	call :insert_value
+	echo.
+	echo DATA VARIABLE %data%
+
+endlocal
+goto :eof
+-------------------------------------------------------------
+
+-------------------------------------------------------------
+Example 2
+
+@echo off
+goto :main
+
+:insert_value
+setlocal
+	echo INSERT DATA VARIABLE
+endlocal & set /a value1=%~1+10
+goto :eof
+
+:main
+setlocal
+
+	set /a value1=10
+
+	echo CREATE AND SET DATA VARIABLE %value1%
+	echo.
+	call :insert_value %value1%
+	echo.
+	echo DATA VARIABLE %value1%
+
+
+endlocal
+goto :eof
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+Example 3
+
+@echo off
+goto :main
+
+:insert_value
+setlocal
+	echo INSERT DATA VARIABLE
+endlocal & set /a value2=%~1+10	
+goto :eof
+
+:main
+setlocal
+
+	set /a value1=10
+	set /a value2=20
+	set /a value3=30
+	set /a value4=40
+	set /a value5=50
+
+	echo CREATE AND SET DATA VARIABLE %value1%
+	echo.
+	call :insert_value %value2%
+	echo.
+	echo DATA VARIABLE %value2%
+
+
+endlocal
+goto :eof
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+Example 4
+
+@echo off
+goto :main
+
+:insert_value
+setlocal
+	echo INSERT DATA VARIABLE
+endlocal & set /a %~1=%~2+10	
+goto :eof
+
+:main
+setlocal
+
+	set /a value1=10
+	set /a value2=20
+
+	echo CREATE AND SET DATA VARIABLE %value1%
+	echo.
+	call :insert_value value1 %value1%
+	echo.
+	echo DATA VARIABLE %value1%
+
+endlocal
+goto :eof
+------------------------------------------------------------------
+
+----------------------------------------------------------------
+Example 5
+
+@echo off
+goto :main
+
+:insert_value
+setlocal
+	echo INSERT DATA VARIABLE
+endlocal & set /a %~1=%~2+10	
+goto :eof
+
+:main
+setlocal
+
+	set /a value1=15
+	set /a value2=25
+
+	echo CREATE AND SET DATA VARIABLE %value1%
+	echo.
+	call :insert_value value2 %value2%
+	echo.
+	echo DATA VARIABLE %value2%
+
+endlocal
+goto :eof
+------------------------------------------------------------------
+
+----------------------------------------------------------------
+Example 6
+
+@echo off
+goto :main
+
+:insert_value
+setlocal
+	echo INSERT DATA VARIABLE
+endlocal & set /a %~1=%~2+%~3+10	
+goto :eof
+
+:main
+setlocal
+
+	set /a value1=10
+	set /a value2=20
+	set /a value3=30
+	set /a value4=40
+	set /a value5=50
+
+	echo CREATE AND SET DATA VARIABLE %value1%
+	echo.
+	call :insert_value value1 %value1% value2 %value2%
+	echo.
+	echo DATA VARIABLE %value1% %value2%
+
+endlocal
+goto :eof
+------------------------------------------------------------------
+
+
+
+NOTED :
+SYNTAX SHOW VALUE :
+- %nama_variabel% dan %~1
+- /a %~1=%~2 show string and value, escape character to manipulated data

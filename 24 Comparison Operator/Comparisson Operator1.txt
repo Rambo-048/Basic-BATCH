@@ -1,0 +1,88 @@
+COMPARISSON OPERATORS :
+
+Example Script :
+---------------------------------------------------
+Example 1
+@echo off
+goto :main
+
+:main
+	echo Hello A
+	
+	set /a A=10
+	set /a B=10
+
+	if %A%==%B% (
+		echo Condition, TRUE.
+	)
+
+	echo Hello B
+goto :eof
+---------------------------------------------------
+
+--------------------------------------------------------
+Example 2
+@echo off
+goto :main
+
+:main
+	echo Hello A
+	
+	set /a A=10
+	set /a B=20
+
+	if not %A%==%B% (
+		echo True A != B
+	)
+
+	echo Hello B
+goto :eof
+------------------------------------------------------------
+
+------------------------------------------------------------
+Example 3
+@echo off
+goto :main
+
+:main
+	echo Hello A
+	
+	set /a A=10
+	set /a B=20
+
+	if not %A% equ %B% (
+		echo TRUE, A != B
+	)
+
+	echo Hello B
+goto :eof
+------------------------------------------------------------
+
+------------------------------------------------------------
+Example 4
+@echo off
+goto :main
+
+:main
+	echo Hello A
+	
+	set /a A=10
+	set /a B=20
+
+	if not %A% lss %B% (
+		echo TRUE, A < B
+	)
+
+	echo Hello B
+goto :eof
+------------------------------------------------------------
+
+
+NOTED :
+EQU = equal
+NEQ = not Equal
+LSS = less than
+LEQ = less than or equal
+GTR = greater than
+GEQ = greater than or equal
+

@@ -1,0 +1,88 @@
+COMPARISSON OPERATORS :
+
+Example Script :
+---------------------------------------------------
+Example 1
+@echo off
+goto :main
+
+:main
+	echo Its A Good Day To Be Happy
+	
+	set /a A=10
+	set /a B=20
+
+	if %A% lss %B% (
+		echo THANKFUL, GREATFUL, BLESSED.
+	)
+
+	echo Life is A Journey
+goto :eof
+---------------------------------------------------
+
+--------------------------------------------------------
+Example 2
+@echo off
+goto :main
+
+:main
+	echo Start Each Day With A Greatful Heart
+	
+	set /a A=20
+	set /a B=30
+
+	if not %A%==%B% (
+		echo BE BRAVE, BE STRONG, BE KIND
+	)
+
+	echo Enjoy The Little Things
+goto :eof
+------------------------------------------------------------
+
+------------------------------------------------------------
+Example 3
+@echo off
+goto :main
+
+:main
+	echo Every Great Story Happened When Someone Decided Not To Give Up
+	
+	set /a A=5
+	set /a B=10
+
+	if not %A% gtr %B% (
+		echo BE A WARRIOR, NOT A WORRIER!!
+	)
+
+	echo Every Sunrise Is A Second Chance To Shine
+goto :eof
+------------------------------------------------------------
+
+------------------------------------------------------------
+Example 4
+@echo off
+goto :main
+
+:main
+	echo Trust What You Feel, Not What You Hear
+	
+	set /a A=35
+	set /a B=40
+
+	if %A% geq %B% (
+		echo BEAUTIFUL FACES ARE EVERYWHERE, BUT BEAUTIFUL HEARTS ARE HARD TO FIND!!
+	)
+
+	echo Eyes Full Of Stories, Heart Full Of Memories
+goto :eof
+------------------------------------------------------------
+
+
+NOTED :
+EQU = equal
+NEQ = not Equal
+LSS = less than
+LEQ = less than or equal
+GTR = greater than
+GEQ = greater than or equal
+

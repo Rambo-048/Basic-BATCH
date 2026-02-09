@@ -1,0 +1,107 @@
+NESTING :
+
+EXAMPLE SCRIPT
+
+ratio = Comparison
+----------------------------------------------------------------------
+Example 1 :
+@echo off
+goto :main
+
+:main
+	set /a value=10
+	set /a total=30
+
+	if %value%==%total% (
+		echo Be Your Own Kind Of Beautiful
+	)else (
+		echo Be The Person You Want To Have In Your Life
+	)
+	
+goto :eof
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+Example 2 :
+@echo off
+goto :main
+
+:main
+	set /a value_A=30
+	set /a value_B=50
+
+	if not %value_A%==%value_B% (
+		echo There Are So Many Beautiful Reasons To Be Happy
+	)else (
+		echo When You Focus On The Good, The Good Gets Better
+	)
+	
+goto :eof
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+Example 3 :
+@echo off
+goto :main
+
+:main
+	set /a value_A=30
+	set /a value_B=50
+
+	set /a a=5
+	set /a b=15
+	set /a total=%a%*%b%
+
+	if %value_A% geq %value_B% (
+		echo Be Such A Beautiful Soul That People Crave Your Vibes
+		
+		if not %value_A% equ %total%(
+			echo THANKFUL, GREATFUL, BLESSED.	
+		)else (
+			echo BE BRAVE, BE STRONG, BE KIND.
+		)
+
+		
+	) else (
+		echo It's Not Always Beautiful And Full Of Happiness, But There Are Beautiful Things Out There.
+	)
+	
+goto :eof
+------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------
+Example 4 :
+@echo off
+goto :main
+
+:main
+	set /a value_A=35
+	set /a value_B=40
+	
+	set /a a=15
+	set /a b=25
+	set /a value_total=%a%*%b%
+
+	if %value_A% geq %value_B% (
+		echo Be Such A Beautiful Soul That People Crave Your Vibes
+		
+		if %value_total% leq %b%(
+			echo THANKFUL, GREATFUL, BLESSED.
+		)else (
+			echo BE BRAVE, BE STRONG, BE KIND.
+		)
+
+		
+	) else (
+		echo It's Not Always Beautiful And Full Of Happiness, But There Are Beautiful Things Out There.
+	)
+------------------------------------------------------------------------------------------------------------------------
+
+NOTED :
+EQU = equal
+NEQ = not Equal
+LSS = less than
+LEQ = less than or equal
+GTR = greater than
+GEQ = greater than or equal
+

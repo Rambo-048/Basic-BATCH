@@ -1,0 +1,157 @@
+DELAYED VARIABLES EXPANSION :
+
+Example Script :
+---------------------------------------------------------
+Example 1
+@echo off
+goto :main
+
+:main
+setlocal
+	
+	echo It's Not Always Beautiful And Full Of Happiness, But There Are Beautiful Things Out There.
+	echo.
+
+	set /a value=20
+	set /a limit=50
+	
+	set /a range_a=35
+	set /a range_b=40
+	
+	set /a total=%value%*%range_b%
+
+	if %value% geq %limit% (
+		echo Check Condition...
+		
+		if %total% leq %value% (
+			echo Condition TRUE		
+		)else (
+			echo Condition FALSE
+		)
+	)else (
+		echo THANKFUL, GREATFUL, BLESSED.
+	)	
+	
+endlocal
+goto :eof
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+Example 2
+@echo off
+goto :main
+
+:main
+setlocal
+	
+	echo It's Not Always Beautiful And Full Of Happiness, But There Are Beautiful Things Out There.
+	echo.
+
+	set /a value=15
+	set /a limit=30
+	
+	set /a range_a=35
+	set /a range_b=40
+	
+	if %value% geq %limit% (
+		echo Check Condition...
+		set /a total=%value%*%range_a%
+
+		
+		if %total% leq %value% (
+			echo Condition TRUE		
+		)else (
+			echo Condition FALSE
+		)
+	)else (
+		echo THANKFUL, GREATFUL, BLESSED.
+	)	
+	
+endlocal
+goto :eof
+---------------------------------------------------------------
+
+---------------------------------------------------------------
+Contoh 3
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+	
+	echo It's Not Always Beautiful And Full Of Happiness, But There Are Beautiful Things Out There.
+	echo.
+
+	set /a value=10
+	set /a limit=20
+	
+	set /a range_a=35
+	set /a range_b=40
+	
+	if %value% geq %limit% (
+		echo Check Condition...
+
+		set /a total=%value_a%*%range_b%
+		echo %total%
+		
+		if %total% leq %value% (
+			echo Condition TRUE		
+		)else (
+			echo Condition FALSE  
+		)
+	)else (
+		echo THANKFUL, GREATFUL, BLESSED.
+	)	
+	
+endlocal
+goto :eof
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+Contoh 4
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+	
+	echo It's Not Always Beautiful And Full Of Happiness, But There Are Beautiful Things Out There.
+	
+	echo When You Focus On The Good, The Good Gets Better.
+	echo "There Are So Many Beautiful Reasons To Be Happy"
+	echo.
+
+	set /a value=5
+	set /a limit=10
+	
+	set /a range_a=35
+	set /a range_b=40
+	
+	if !value! geq !limit! (
+		echo Check Condition...
+
+		set /a total=!value!*!range_b!
+		echo !total! 
+		
+		if !total! leq !value! (
+			echo Condition TRUE		
+		)else (
+			echo Condition FALSE
+		)
+	)else (
+		echo THANKFUL, GREATFUL, BLESSED.
+	)	
+	
+endlocal
+goto :eof
+-----------------------------------------------------------------
+
+NOTED :
+EQU = equal
+NEQ = not Equal
+LSS = less than
+LEQ = less than or equal
+GTR = greater than
+GEQ = greater than or equal

@@ -1,0 +1,23 @@
+ELSE STATEMENT :
+
+EXAMPLE SCRIPT :
+
+@echo off
+goto :main
+
+:main
+	echo Hello!
+	echo.
+	
+	set /a A=10
+	set /a B=20
+
+	if %A%==%B% (
+		echo Yes, A == B
+	) else (
+		echo No, A != B
+	)
+
+	echo.
+	echo End!
+goto :eof

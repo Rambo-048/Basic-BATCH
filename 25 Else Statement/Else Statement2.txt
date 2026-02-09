@@ -1,0 +1,23 @@
+ELSE STATEMENT :
+
+EXAMPLE SCRIPT :
+
+@echo off
+goto :main
+
+:main
+	echo When You Focus On The Good, The Good Gets Better
+	echo.
+	
+	set /a A=20
+	set /a B=20
+
+	if not %A%==%B% (
+		echo Thankful And Greatful For Everyday 
+	) else (
+		echo Life is A Journey, Enjoy The Ride
+	)
+
+	echo.
+	echo It's Not Always Beautiful And Full Of Happiness, But There Are Beautiful Things Out There.
+goto :eof

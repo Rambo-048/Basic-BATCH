@@ -1,0 +1,57 @@
+WHILE LOOP
+
+Example Script
+----------------------------------------------------
+RUMUS
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+	set /a value=40
+	set /a range=0
+	
+	while (value >= range): #{
+		value-=1
+		echo value
+	#}
+
+endlocal
+goto :eof
+-----------------------------------------------------
+
+-----------------------------------------------------
+EXAMPLE
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+	set /a value=40
+	set /a range=0
+	
+	:loop
+	if !value! geq !range! (
+		echo !value!
+		set /a VALUE=!value!-1
+
+		goto :loop
+	)
+
+	echo. 
+	echo Value is %VALUE%
+
+endlocal
+goto :eof
+----------------------------------------------
+
+NOTED :
+EQU = equal
+NEQ = not Equal
+LSS = less than
+LEQ = less than or equal
+GTR = greater than
+GEQ = greater than or equal
+

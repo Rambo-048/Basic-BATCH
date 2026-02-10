@@ -1,0 +1,83 @@
+The SET :
+
+Example Script
+-------------------------------------------------
+Example 1
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	set string=The Only Way To Do Great Work Is To Love What You Do!
+	echo !string!
+	echo.
+
+	for %%g in ( A B C D E ) do (
+		echo %%g
+		if !value! equ %%g (
+			echo !value! is %%g
+		)
+	)
+
+endlocal
+goto :eof
+--------------------------------------------------
+
+--------------------------------------------------
+Example 2
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	set string=The Only Way To Do Great Work Is To Love What You Do!
+	echo !string!
+	echo.
+
+	for %%g in ( It's Not Always Beautiful And Full Of Happiness, But There Are Beautiful Things Out There. ) do (
+		echo %%g
+		if !value! equ %%g (
+			echo !value! is %%g
+		)
+	)
+
+endlocal
+goto :eof
+----------------------------------------------------
+
+-----------------------------------------------------------
+Example 3
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	set string=The Only Way To Do Great Work Is To Love What You Do!
+	echo !string!
+	echo.
+
+	for %%g in ( "THANKFUL, GREATFUL, BLESSED." ) do (
+		echo %%g
+		if !value! equ %%g (
+			echo !value! is %%g
+		)
+	)
+
+endlocal
+goto :eof
+------------------------------------------------------------
+
+NOTED :
+EQU = equal
+NEQ = not Equal
+LSS = less than
+LEQ = less than or equal
+GTR = greater than
+GEQ = greater than or equal
+

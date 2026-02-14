@@ -1,0 +1,60 @@
+FOR THROUGH DIRECTORIES :
+
+Example Script :
+----------------------------------------------------
+Example 1
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /d %%g in ( You Cant Always Be The Best, But You Can Always Do Your Best ) do (
+		echo %%g
+	)	
+
+endlocal
+goto :eof
+-----------------------------------------------------
+
+-----------------------------------------------------
+Example 2 (Show all directory on a users)
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /d %%g in ( * ) do (
+		echo %%g
+	)	
+
+endlocal
+goto :eof
+--------------------------------------------------------
+
+-----------------------------------------------------------------
+Example 3 (Show all directory with first name Z)
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /d %%g in ( Z* ) do (
+		echo %%g
+	)	
+
+endlocal
+goto :eof
+------------------------------------------------------------------
+
+NOTED :
+/d ==> Directory
+

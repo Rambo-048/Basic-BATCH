@@ -1,0 +1,36 @@
+FOR LOOP INTRODUCTION :
+
+Example Script
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	set string=Eyes Full Of Stories, Heart Full Of Memories!
+	echo !string!
+	echo.
+
+	:: set /a value=0
+	:: set /a data=35-25
+	for %%g in ( 1 2 3 4 5 6 7 8 9 10 ) do (
+		echo %%g
+		set /a data=5
+		if !data! equ %%g (
+			echo Data !data! - Range %%g
+		)
+	)
+
+endlocal
+goto :eof
+
+
+NOTED :
+EQU = equal
+NEQ = not Equal
+LSS = less than
+LEQ = less than or equal
+GTR = greater than
+GEQ = greater than or equal

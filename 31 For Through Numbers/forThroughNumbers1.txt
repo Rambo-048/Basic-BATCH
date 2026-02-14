@@ -1,0 +1,105 @@
+FOR THROUGH NUMBERS
+
+Example Script :
+----------------------------------------------------------
+Example 1
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for %%g in ( This is set function ) do (
+		echo %%g
+	)	
+
+endlocal
+goto :eof
+-----------------------------------------------------------
+
+-----------------------------------------------------------
+Example 2
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /l %%g in ( start, step, end ) do (
+		echo %%g
+	)	
+
+endlocal
+goto :eof
+------------------------------------------------------------
+
+-----------------------------------------------------------
+Example 3 (Bilangan Kelipatan1 1)
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /l %%g in ( 1, 1, 10 ) do (
+		echo %%g
+	)	
+
+endlocal
+goto :eof
+-------------------------------------------------------------
+
+-------------------------------------------------------------
+Example 4 (Bilangan Kelipatan1 5)
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /l %%g in ( 1, 5, 30 ) do (
+		echo %%g
+	)	
+
+endlocal
+goto :eof
+---------------------------------------------------------------
+
+---------------------------------------------------------------
+Example 5 (Bilangan Kelipatan1 5)
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /l %%g in ( 0, 5, 50 ) do (
+		echo %%g
+	)	
+
+endlocal
+goto :eof
+---------------------------------------------------------------
+
+---------------------------------------------------------------
+Example 6 (Bilangan Kelipatan1 10)
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /l %%g in ( 0, 10, 100 ) do (
+		echo %%g
+	)	
+
+endlocal
+goto :eof
+---------------------------------------------------------------
+

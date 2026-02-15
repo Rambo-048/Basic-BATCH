@@ -1,0 +1,137 @@
+FOR OPTIONS :
+
+Example Script :
+------------------------------------------------
+Example 1
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /f %%g in ( data1.txt ) do (
+		echo %%g 
+	)
+
+endlocal
+goto :eof
+-------------------------------------------------
+
+---------------------------------------------------------------
+Example 2
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /f "delims=/" %%g in ( file1.csv ) do (
+		echo %%g 
+	)
+
+endlocal
+goto :eof
+----------------------------------------------------------------
+
+-------------------------------------------------------------------
+Example 3
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /f "delims=/ skip=5" %%g in ( file1.txt ) do (
+		echo %%g 
+	)
+
+endlocal
+goto :eof
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+Example 4
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /f "tokens=*" %%g in ( file2.csv ) do (
+		echo %%g 
+	)
+
+endlocal
+goto :eof
+--------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Example 5
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /f "tokens=1,3,5,7 delims=," %%g in ( file2.csv ) do (
+		echo %%g 
+	)
+
+endlocal
+goto :eof
+------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------
+Example 6
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /f "tokens=1-10 delims=," %%g in ( file2.csv ) do (
+		echo %%g, name %%i and id '%%j' 
+	)
+
+endlocal
+goto :eof
+------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------
+Example 6
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /f "delims=1,3,5,7" %%g in ( file1.csv ) do (
+		echo %%g
+	)
+
+endlocal
+goto :eof
+
+
+
+
+CATATAN :
+/f               ==> Read File
+
+/f "delimeter=/" ==> Read Value File
+
+/ ==> Explode String Text
+

@@ -1,0 +1,24 @@
+BREAK THE FOR LOOP :
+
+EXAMPLE SCRIPT
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	for /l %%g in (1,5,50) do (
+		if %%g equ 30 (
+			goto :loop_end	
+		)
+		echo %%g
+
+	:loop_end
+	echo.
+	echo End of Loop! (This is value-30)
+	)	
+
+endlocal
+goto :eof

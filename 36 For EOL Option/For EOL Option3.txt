@@ -1,0 +1,22 @@
+FOR EOL Option
+
+EXAMPLE SCRIPT
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+
+:main
+setlocal
+
+	for /f "eol=#" %%g in ( script1.cfg ) do (
+		echo %%g 	
+	)
+
+endlocal
+goto :eof
+
+
+NOTED :
+- eol ==> End Of Line

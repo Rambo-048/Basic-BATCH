@@ -1,0 +1,45 @@
+REDIRECTION (WRITE DATA TO TEXT)
+
+Example Script
+--------------------------------------------------------------
+Example 1
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	::stdout 1
+	::stderr 2
+
+	echo We Must Be Our Own Before We Can Be Anothers> file1.txt
+
+endlocal
+goto :eof
+---------------------------------------------------------------
+
+---------------------------------------------------------------
+Example 2
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	::stdout 1
+	::stderr 2
+
+	echo Do Everything With A Good Heart And Expect Nothing In Return, And You Will Never Be Disappointed>> file1.txt
+
+endlocal
+goto :eof
+-------------------------------------------------------------
+
+NOTED :
+>  == Overwrite file in text
+>> == Append teks into a file
+

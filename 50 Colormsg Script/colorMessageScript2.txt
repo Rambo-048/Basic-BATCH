@@ -1,0 +1,23 @@
+COLOR MESSAGE SCRIPT
+
+C:\Users\Sahara>color /?
+
+C:\Users\Sahara>color c7
+
+C:\Users\Sahara>color d9
+
+C:\Users\Sahara>color c0
+
+C:\Users\Sahara>color e5
+
+C:\Users\Sahara>color f7
+
+C:\Users\Sahara>color f0
+
+C:\Users\Sahara>color 82
+
+C:\Users\Sahara>color 02
+
+C:\Users\Sahara>color b1
+
+C:\Users\Sahara>color 90

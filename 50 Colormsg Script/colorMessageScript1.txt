@@ -1,0 +1,7 @@
+COLOR MESSAGE SCRIPT
+
+C:\Users\Sahara>color /?
+
+C:\Users\Sahara>color b
+
+C:\Users\Sahara>color 07

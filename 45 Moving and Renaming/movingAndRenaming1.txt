@@ -1,0 +1,17 @@
+MOVING AND RENAMING :
+
+C:/Users/Sahara>move /?
+
+C:/Users/Sahara>move data.txt new_data.txt
+
+C:/Users/Sahara>move /Y new_data.txt ../folder
+
+C:/Users/Sahara>move /Y new_data.txt ../folder > data.txt
+
+C:/Users/Sahara/folder>move ..\new_data.txt .
+
+C:/Users/Sahara>move folder folder2
+
+CATATAN :
+move ==> Move and Rename file
+

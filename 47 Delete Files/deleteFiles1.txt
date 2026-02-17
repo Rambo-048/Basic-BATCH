@@ -1,0 +1,11 @@
+DELETE FILES :
+
+- delete
+
+C:/Users/Sahara>del /?
+
+C:/Users/Sahara/folder>echo folder>data.txt
+
+C:/Users/Sahara>del data.txt
+
+C:/Users/Sahara>del /P data.txt

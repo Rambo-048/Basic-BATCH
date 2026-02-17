@@ -1,0 +1,39 @@
+REDIRECTION DATA WITH CHOICE
+
+Example Script :
+----------------------------------------
+Example 1
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	echo Do Everything With A Good Heart And Expect Nothing In Return, And You Will Never Be Disappointed
+	
+	choice
+
+endlocal
+goto :eof
+-----------------------------------------
+
+-----------------------------------------
+Example 2
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	echo Sometimes We Will Never Know The Value Of A Moment Until It Becomes Memory
+
+	choice
+
+endlocal
+goto :eof
+------------------------------------------
+

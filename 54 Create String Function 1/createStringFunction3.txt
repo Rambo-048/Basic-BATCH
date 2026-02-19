@@ -1,0 +1,21 @@
+CREATE STRING FUNCTIONS
+
+Example SCRIPT
+--------------------------------------------------------------------------------
+Example (Local Variable)
+::(CREATE STRING USE SCRIPT)
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	call create_string variable "THANKFUL, GREATFUL, BLESSED" 
+
+	echo !variable!
+
+endlocal
+goto :eof
+----------------------------------------------------------------------------------

@@ -1,0 +1,21 @@
+CREATE STRING FUNCTIONS
+
+Example SCRIPT 
+---------------------------------------------------------------------------
+::(CREATE STRING USE SCRIPT)
+
+@echo off
+setlocal EnableDelayedExpansion
+goto :main
+
+:main
+setlocal
+
+	call create_string variable "It's Not Always Beautiful And Full Of Happiness, But There Are Beautiful Things Out There" 
+
+	echo !variable!
+	echo !variable_length!
+
+endlocal
+goto :eof
+----------------------------------------------------------------------------

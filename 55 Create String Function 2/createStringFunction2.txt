@@ -1,0 +1,33 @@
+CREATE STRING FUNCTIONS
+
+Example SCRIPT
+--------------------------------------------------------------------------
+Example 2
+
+@echo off
+
+set string=%2
+
+for /f "useback tokens=*" %%g in ('%string%') do set string=%%~g
+
+echo %2 > %TEMP%\tempfile.txt
+
+for %%g in (%TEMP%\tempfile.txt) do (
+	set /a %1_length=%%~zg - 5
+)
+del %TEMP%\tempfile.txt
+set %1=%string%
+
+--------------------------------------------------------------------------
+::CREATE STRING 2
+save filename --> create_string.bat
+
+Run Example 2: (CREATE STRING MANUAL)
+C:\Users\Sahara\Documents>create_string VARIABLE "WHEN YOU FOCUS ON GOOD, THE GOOD GETS BETTER"
+
+C:\Users\Sahara\Documents>echo %VARIABLE%
+WHEN YOU FOCUS ON GOOD, THE GOOD GETS BETTER
+
+C:\Users\Sahara\Documents>echo %VARIBLE_length%
+44
+--------------------------------------------------------------------------

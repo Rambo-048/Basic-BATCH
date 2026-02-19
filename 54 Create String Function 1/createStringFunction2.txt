@@ -1,0 +1,22 @@
+CREATE STRING FUNCTIONS
+
+Example SCRIPT
+-----------------------------------------------------------------------------
+Example (Global Variable)
+
+@echo off
+
+set string=%2
+
+for /f "useback tokens=*" %%g in ('%string%') do set string=%%~g
+
+::VARIABLE NOT DEFINED
+set %1
+
+::VARIABLE NOT CREATED
+create_string VARIABLE "THANKFUL, GREATFUL, BLESSED"
+
+
+-----------------------------------------------------------------------------
+
+

@@ -11,7 +11,7 @@ goto :main
 :main
 setlocal
 
-	set string="TEXT"
+	set string="THANKFUL,GREATFUL,BLESSED"
 
 	echo !string!
 
@@ -29,7 +29,7 @@ goto :main
 :main
 setlocal
 
-	set string="TEXT"
+	set string="THANKFUL,GREATFUL,BLESSED"
 	for /f "useback tokens=*" %%g in ('!string!') do set string=%%~g
 
 	echo !string!

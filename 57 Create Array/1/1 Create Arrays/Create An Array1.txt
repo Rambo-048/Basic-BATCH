@@ -1,0 +1,7 @@
+CREATING AN ARRAY
+
+@echo off 
+set list_font=A B C D E F G H I J
+(for %%a in (%list_font%) do ( 
+   echo %%a 
+))

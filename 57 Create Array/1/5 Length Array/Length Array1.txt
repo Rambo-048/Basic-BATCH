@@ -1,0 +1,19 @@
+@echo off 
+
+set STRING[0]=THANKFUL 
+set STRING[1]=GREATFUL 
+set STRING[2]=BLESSED
+set STRING[3]=BRAVE 
+set STRING[4]=STRONG 
+set STRING[5]=KIND 
+
+set VALUE=0 
+
+:stringLoop 
+
+if defined STRING[%VALUE%] ( 
+   call echo %%STRING[%VALUE%]%% 
+   set /a "VALUE+=1"
+   GOTO :stringLoop 
+)
+echo "DATA LENGTH -->" %VALUE%

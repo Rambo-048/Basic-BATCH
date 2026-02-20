@@ -1,0 +1,7 @@
+CREATING AN ARRAY
+
+@echo off 
+set string=Beautiful Faces Are Everywhere, But Beautiful Hearts Are Hard To Find
+(for %%a in (%string%) do ( 
+   echo %%a 
+))

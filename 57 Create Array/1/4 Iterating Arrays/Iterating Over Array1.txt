@@ -1,0 +1,13 @@
+@echo off
+setlocal enabledelayedexpansion 
+
+set STRING[0]=THANKFUL 
+set STRING[1]=GREATFUL 
+set STRING[2]=BLESSED
+set STRING[3]=BRAVE 
+set STRING[4]=STRONG 
+set STRING[5]=KIND 
+
+for /l %%g in (0,1,5) do ( 
+   echo !STRING[%%g]! 
+)

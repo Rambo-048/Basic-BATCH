@@ -1,0 +1,15 @@
+ACCESSING ARRAY
+
+@echo off 
+
+set Char[0]=A
+set Char[1]=B
+set Char[2]=C
+set Char[3]=D
+set Char[4]=E
+
+echo First Element %Char[0]%
+echo Second Element %Char[1]%
+echo Third Element %Char[2]%
+echo Fourth Element %Char[3]%
+echo Fifth Element %Char[4]%

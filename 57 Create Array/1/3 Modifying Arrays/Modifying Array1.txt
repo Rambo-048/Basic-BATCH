@@ -1,0 +1,15 @@
+MODIFYING ARRAY
+
+@echo off 
+
+set Char[0]=A
+set Char[1]=B
+set Char[2]=C
+set Char[3]=D
+set Char[4]=E
+
+::CREATE NEW VALUE
+set Char[0]=Z
+
+echo Char %Char[0]%
+

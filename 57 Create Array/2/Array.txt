@@ -1,0 +1,19 @@
+EXAMPLE SCRIPT
+
+@echo off
+setlocal EnableDelayedExpansion
+goto :main
+
+:main
+setlocal
+
+	call create_array list_font " " "A B C D E"
+	
+	::echo !list_font!
+
+	echo !list_font[0]!
+
+	::echo !list_font_length!
+endlocal
+goto :eof
+

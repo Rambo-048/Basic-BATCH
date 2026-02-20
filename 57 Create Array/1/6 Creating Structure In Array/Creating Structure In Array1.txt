@@ -1,0 +1,18 @@
+@echo off 
+
+set object[0].NAME=Lada 
+set object[0].ID=41 
+set object[1].NAME=Ketumbar 
+set object[1].ID=42 
+set object[2].NAME=Jahe
+set object[2].ID=43
+set object[3].NAME=Kencur 
+set object[3].ID=44 
+set object[4].NAME=Kemiri
+set object[4].ID=45
+
+for /l %%a in (0 1 4) do  (
+   call echo Name  = %%object[%%a].NAME%%
+   call echo ID    = %%object[%%a].ID%%
+   echo.
+)

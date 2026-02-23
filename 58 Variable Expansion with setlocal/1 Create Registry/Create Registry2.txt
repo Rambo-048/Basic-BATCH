@@ -1,0 +1,40 @@
+CREATE REGISTRY :
+
+EXAMPLE SCRIPT :
+--------------------------------------------------------------------------------------------
+Example 1 (ENABLE SYSTEM REGISTRY)
+
+@echo off
+reg add "HKLM\Software\SystemRegistry" /v "RegistryKey" /t REG_DWORD /d 1 /f
+
+-------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------
+Example 2 (ENABLE SYSTEM REGISTRY)
+
+@echo off
+reg add "HKLM\Software\SystemRegistry" /v "RegistryKey" /t REG_DWORD /d 1 /f > nul
+
+-------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------
+Example 3 (DISABLE SYSTEM REGISTRY)
+
+@echo off
+
+reg add "HKLM\Software\SystemRegistry" /v "RegistryKey" /t REG_DWORD /d 0 /f
+
+-------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------
+Run Script :
+- run => regedit
+- reg add /?
+- open cmd as adminitrator
+
+C:\Users\Sahara>nama_file.bat
+C:\Users\Sahara>echo !COMPUTERNAME!
+
+
+reg add "HKLM\Software\SystemRegistry" /v "RegistryKey" /t REG_DWORD /d bool /f
+-----------------------------------------------------------------------------------------

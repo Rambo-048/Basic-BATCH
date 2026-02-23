@@ -1,0 +1,10 @@
+COPY REGISTRY :
+
+EXAMPLE SCRIPT :
+--------------------------------------------------------------------------------------------
+Example 1 
+
+@echo off
+reg add "HKLM\Software\SystemRegistry" "HKLM\Software\DataSystemRegistry" 
+-------------------------------------------------------------------------------------------
+

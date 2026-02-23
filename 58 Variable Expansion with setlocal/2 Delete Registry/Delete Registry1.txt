@@ -1,0 +1,9 @@
+DELETE REGISTRY :
+
+
+EXAMPLE SCRIPT :
+--------------------------------------------------------------------------------------------
+
+@echo off
+
+reg delete "HKLM\Software\SystemRegistry"

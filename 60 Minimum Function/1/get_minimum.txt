@@ -21,6 +21,3 @@ for /l %%g in ( 0, 1, %data% ) do (
 
 set %2=!minimum!
 
-
-NOTED :
-- min ==> Minimum

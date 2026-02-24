@@ -8,11 +8,6 @@ Example 1
 @echo off
 goto :main
 
-
-:: create_string name "delimiter" "content"
-:: create_string list_font " " "A B C D E"
-
-
 :set_index
 
 	call create_string %~1[%~2] "!%~3!"

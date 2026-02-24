@@ -1,0 +1,36 @@
+CREATE STRING FUNCTIONS
+
+Example SCRIPT
+------------------------------------------------------------------------------
+Example 1 (Global Variable)
+
+@echo off
+
+set string=%2
+
+for /f "useback tokens=*" %%g in ('%string%') do set string=%%~g
+
+::Variable Not Defined
+set %1 
+-------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+Example 2 (Global Variable)
+
+@echo off
+
+set string=%2
+
+for /f "useback tokens=*" %%g in ('%string%') do set string=%%~g
+
+::Variable Defined
+set %1=%string% 
+-------------------------------------------------------------------------------
+save filename --> create_string.bat
+
+Run Example : (CREATE STRING MANUAL)
+C:\Users\Sahara\Documents>create_string VARIABLE "THANKFUL, GREATFUL, BLESSED"
+
+C:\Users\Sahara\Documents>echo %VARIABLE%
+THANKFUL, GREATFUL, BLESSED
+------------------------------------------------------------------------------

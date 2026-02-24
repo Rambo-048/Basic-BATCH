@@ -1,0 +1,102 @@
+VARIABLE EXPANSION WITHOUT SETLOCAL :
+
+EXAMPLE SCRIPT :
+-------------------------------------------------------------------------------------------------------
+Example 1
+
+@echo off
+
+reg query "HKLM\Software\Microsoft\Command Processor" /v "DelayedExpansion"
+--------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------
+Example 2
+
+@echo off
+
+for /f %%g in ('reg query "HKLM\Software\Microsoft\Command Processor" /v "DelayedExpansion"') do (
+	echo %%g
+)
+-----------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------
+Example 3
+
+@echo off
+
+for /f "tokens=*" %%g in ('reg query "HKLM\Software\Microsoft\Command Processor" /v "DelayedExpansion"') do (
+	echo %%g
+)
+-----------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------
+Example 4
+
+@echo off
+
+for /f "tokens=3" %%g in ('reg query "HKLM\Software\Microsoft\Command Processor" /v "DelayedExpansion"') do (
+	echo %%g
+)
+-----------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Example 5
+
+@echo off
+
+for /f "tokens=*" in ('reg query "HKLM\Software\Microsoft\Command Processor" /v "DelayedExpansion"') do (
+	set output=%%g
+	echo %output:~2%
+)
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Example 6
+
+@echo off
+
+for /f "tokens=*" in ('reg query "HKLM\Software\Microsoft\Command Processor" /v "DelayedExpansion"') do (
+	set output=%%g
+	echo %output:~2,1%
+)
+-------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------
+Example 7
+
+@echo off
+
+for /f "tokens=*" in ('reg query "HKLM\Software\Microsoft\Command Processor" /v "DelayedExpansion"') do (
+	set output=%%g
+	echo %output:~-1%
+)
+---------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Example 8
+
+@echo off
+
+for /f "tokens=3" in ('reg query "HKLM\Software\Microsoft\Command Processor" /v "DelayedExpansion"') do (
+	set output=%%g
+	
+)
+echo %output:~2,1%
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Example 9
+
+@echo off
+
+for /f "tokens=3" in ('reg query "HKLM\Software\Microsoft\Command Processor" /v "DelayedExpansion"') do (
+	set output=%%g
+	
+)
+echo %output:~-1%
+-------------------------------------------------------------------------------------------------------------
+
+Run Script :
+- C:\Users\Sahara\Documents>nama_file.bat
+- C:\Users\Sahara\Documents>e  <== enable
+- C:\Users\Sahara\Documents>d  <== disable

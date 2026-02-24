@@ -1,0 +1,38 @@
+INSERT REGISTRY :
+
+
+EXAMPLE SCRIPT :
+--------------------------------------------------------------------------------------------
+Example 1 
+@echo off
+reg add "HKLM\Software\SystemRegistry" /v "RegistryKey1" /t REG_BINARY /d 53554E52495345
+-------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------
+Example 2 
+
+@echo off
+reg add "HKLM\Software\SystemRegistry" /v "RegistryKey2" /t REG_BINARY /d 4A4F55524E455A /f
+
+-------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------
+Example 3
+
+@echo off
+reg add "HKLM\Software\SystemRegistry" /v "RegistryKey3" /t REG_BINARY /d 73756E7368696E65 /f
+
+-------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------
+Run Script :
+- run => regedit
+- reg add /?
+- open cmd as adminitrator
+
+C:\Users\Sahara>nama_file.bat
+C:\Users\Sahara>echo !COMPUTERNAME!
+
+
+reg add "HKLM\Software\SystemRegistry" /v "RegistryKey" /t REG_DWORD /d bool /f
+-----------------------------------------------------------------------------------------

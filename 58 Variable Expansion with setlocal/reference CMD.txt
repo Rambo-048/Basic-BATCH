@@ -1,4 +1,0 @@
-REFERENCE :
-
-CMD CHEAT SHEET
-https://ss64.com/nt/reg.html

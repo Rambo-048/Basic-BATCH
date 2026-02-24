@@ -1,0 +1,18 @@
+EXAMPLE SCRIPT
+
+@echo off
+setlocal EnableDelayedExpansion
+goto :main
+
+:main
+setlocal
+
+	call create_array list_of_numbers "," "1,2,3,4,5,6,7,8,9"
+
+	call get_minimum list_of_numbers minimum
+	
+	echo !minimum!
+
+endlocal
+goto :eof
+

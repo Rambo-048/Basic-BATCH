@@ -1,0 +1,16 @@
+EXAMPLE SCRIPT
+
+@echo off
+setlocal EnableDelayedExpansion
+goto :main
+
+:main
+setlocal
+
+	call create_array list_of_numbers
+
+	call get_maximum
+
+endlocal
+goto :eof
+

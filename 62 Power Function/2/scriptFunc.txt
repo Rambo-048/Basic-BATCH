@@ -1,0 +1,16 @@
+Example SCRIPT
+
+@echo off
+setlocal EnableDelayedExpansion
+goto :main
+
+:main
+setlocal
+
+	call 5 6 power
+
+	echo %power%
+
+endlocal
+goto :eof
+

@@ -1,0 +1,45 @@
+ARITHMATIC OPERATORS
+
+EXAMPLE SCRIPT
+
+Example 1
+--------------------------------------------------------------------------------------------------------------------------------
+@echo off
+
+set /a A = 5
+set /a B = 10
+set /a C = 15
+set /a D = 20
+set /a E = 25
+set /a F = 30
+
+if %A% == 5 goto :label_A
+if %F% == 30 goto :label_C
+
+:label_A
+set /a value1 = %A% * %C%
+echo %value1%
+goto :label_B
+
+:label_B
+set /a value2 = %value1% - %E%
+echo %value2%
+
+:label_C
+set /a value3 = %value1% + %value2%
+echo %value3
+goto :label_D
+
+:label_D
+set /a value4 = %value1% * %value2% / %value3%
+echo %value4%
+goto :label_E
+
+:label_E
+set /a value5 = %value4% %% %A%
+echo %value5%
+
+
+
+
+

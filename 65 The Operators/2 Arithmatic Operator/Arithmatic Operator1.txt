@@ -1,0 +1,24 @@
+ARITHMATIC OPERATORS
+
+EXAMPLE SCRIPT
+
+Example 1
+--------------------------------------------------------------------------------------------------------------------------------
+@echo off
+
+set /a A = 5
+set /a B = 10
+set /a C = 15
+set /a D = 20
+set /a E = 25
+set /a F = 30
+
+set /a value1 = %A% + %B%
+echo %value1%
+
+set /a value2 = %C% * %D%
+echo %value2%
+
+set /a value3 = %E% - %F%
+echo %value3%
+

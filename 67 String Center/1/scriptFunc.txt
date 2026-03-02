@@ -1,0 +1,25 @@
+CONTOH SCRIPT
+
+@echo off
+setlocal enabledelayedexpansion
+
+:main
+setlocal
+
+	call create_string sentence "THANKFUL GREATFUL BLESSED"
+	echo %sentence_length%
+	echo.
+	echo %sentence%
+	
+	call string_center sentence 50 fill
+	echo !fill!
+	
+	::color 0a
+	
+	::call colormsg !fill! (Create Script colormsg.bat first)
+	::call colormsg 1F "!fill!" (Create Script colormsg.bat first)
+
+	
+
+endlocal
+goto :eof

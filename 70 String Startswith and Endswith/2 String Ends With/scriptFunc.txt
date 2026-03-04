@@ -1,0 +1,16 @@
+CONTOH SCRIPT
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	call create_string data "Thankful Greatful Blessed"	
+	call string_ends_with "!data!" "Wonderful" print
+
+	echo !print!
+
+endlocal
+goto :eof

@@ -1,0 +1,17 @@
+EXAMPLE SCRIPT
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	call create_string data "thankful greatful blessed"
+
+	call capitalize "!data!" return
+
+	echo !return!
+
+endlocal
+goto :eof

@@ -7,7 +7,7 @@ goto :main
 :main
 setlocal
 
-	call create_array list_numbers
+	call create_array list_number
 
 	call get_maximum
 

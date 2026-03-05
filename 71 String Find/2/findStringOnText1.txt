@@ -1,0 +1,8 @@
+CONTOH FINDSTRING SCRIPT
+
+@echo off
+
+::findstr /s /i G *.txt
+findstr /s /i GREAT *.*
+
+

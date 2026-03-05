@@ -1,0 +1,20 @@
+CONTOH SCRIPT
+
+@echo off
+
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	call create_string string "THANKFUL56789876"
+	call string_upper "!string!" return 
+	
+	echo !return!
+
+endlocal
+goto :eof
+
+NOTED :
+-> save "script.bat"

@@ -1,0 +1,17 @@
+CONTOH SCRIPT
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+
+:main
+setlocal
+
+	call create_string string "sometimes we will never know value of a moment until it becomes memory"
+	call string_to_upper "!string!" return
+	
+	echo !return!
+
+endlocal
+goto :eof

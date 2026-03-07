@@ -1,0 +1,19 @@
+CONTOH SCRIPT
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+
+:main
+setlocal
+
+	call create_string string "DO EVERYTHING with a GOOD Heart and EXPECT NOTHING in Return, and You will NEVER be DISAPPOINTED"
+	call string_to_upper "!string!" return
+	
+	echo !return!
+
+endlocal
+goto :eof
+
+

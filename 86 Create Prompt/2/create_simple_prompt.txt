@@ -1,0 +1,10 @@
+@echo off
+color A
+prompt Command Prompt
+echo.
+echo.
+echo WELCOME TO THE PROMPT
+echo.
+echo.
+
+pause

@@ -1,0 +1,19 @@
+CONTOH SCRIPT 
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	call create_array array " " "We Must Be Our Own Before We Can Be Anothers"
+	call array_insert array " " "WHEN YOU FOCUS ON GOOD, THE GOOD GETS BETTER" 5
+	
+	echo !array!
+	echo !array_length!
+	echo !array[5]!
+
+endlocal
+goto :eof
+

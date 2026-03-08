@@ -1,0 +1,19 @@
+CONTOH SCRIPT 
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	call create_array array " " "Look At All The Beauty In Your Life And Be Happy"
+	call array_insert array " " "The Only Way To Do Great Work Is To Love What You Do" 5
+	
+	echo !array!
+	echo !array_length!
+	echo !array[10]!
+
+endlocal
+goto :eof
+

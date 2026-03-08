@@ -1,0 +1,27 @@
+NETWORK
+
+IP Addresses Internet Protocol Address
+
+Public IP Address 123.456.78.910   network.com
+                                   DNS
+---------------------------------------------------------------
+
+                            Router 0
+                          123.456.1.1 
+                       Default Gateway
+                       
+       Router1                                 Router2
+   123.456.1.30                             123.456.1.35
+                              
+                              
+                           Router 3
+                         123.456.1.50
+                         
+                         
+                         
+WAN = Wide Area Network
+LAN = Local Area Network
+
+-- RUN --
+C:\users\User>nslookup help
+C:\users\User>nslookup /?

@@ -1,0 +1,17 @@
+CONTOH SCRIPT
+
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	call create_array array " " "Thankful Greatful Blessed"
+	call array_index array "Blessed" return
+	
+	echo !array!
+	echo !return!
+	
+endlocal
+goto :eof

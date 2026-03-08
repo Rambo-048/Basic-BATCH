@@ -1,0 +1,13 @@
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	call create_array array " " "beautiful faces are everywhere, but beautiful hearts are hard to find"
+	call array_remove array " " 2
+
+	echo !array!
+endlocal
+goto :eof

@@ -1,0 +1,13 @@
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	call create_array array " " "The Only Way To Do Great Work Is To Love What You Do"
+	call array_remove array " " 0
+
+	echo !array!
+endlocal
+goto :eof

@@ -1,0 +1,13 @@
+@echo off
+setlocal enabledelayedexpansion
+goto :main
+
+:main
+setlocal
+
+	call create_array array " " "DO EVERYTHING WITH A GOOD HEART AND EXPECT NOTHING IN RETURN, AND YOU WILL NEVER BE DISAPPOINTED"
+	call array_remove array " " 3
+
+	echo !array!
+endlocal
+goto :eof

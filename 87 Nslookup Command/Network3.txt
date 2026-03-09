@@ -1,0 +1,28 @@
+NETWORK
+
+IP Addresses Internet Protocol Address
+
+Public IP Address 877.367.756.968   network.com
+
+                                   DNS
+---------------------------------------------------------------
+
+                            Router 0
+                         837.879.87.1
+                       Default Gateway
+                       
+       Router1                                 Router2
+    837.879.87.15                           837.879.87.35
+                              
+                              
+                           Router 3
+                         837.879.87.25
+                         
+                         
+                         
+WAN = Wide Area Network
+LAN = Local Area Network
+
+-- RUN --
+C:\users\User>nslookup help
+C:\users\User>nslookup /?
